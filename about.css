@@ -1,0 +1,1042 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+ 
+ :root {
+     --primary-color: #116466;
+     --secondary-color: #D9B08C;
+     --background-color: #0f172a;
+     --text-color: #D1E8E2;
+     --text-secondary: #94a3b8;
+     --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     --transition: all 0.3s ease-in-out;
+     --accent-color: #6edae3;
+     /* New accent color */
+     --gold-color: #FFD700;
+     /* New gold color */
+     --nav-bg: rgba(15, 23, 42, 0.9);
+     /* New nav background color */
+     --light: #D1E8E2;
+     /* New light color */
+     --gradient: linear-gradient(135deg, var(--background-color) 0%, var(--primary-color) 100%);
+     /* New gradient color */
+     --achievement-border-color: #b8860b;
+     /* Dark Goldenrod */
+     --achievement-shine-color1: #FFD700;
+     /* Gold */
+     --achievement-shine-color2: #DAA520;
+     /* Goldenrod */
+     --achievement-shine-color3: #B8860B;
+     /* DarkGoldenrod */
+ }
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+}
+
+ body {
+     font-family: 'Poppins', sans-serif;
+     background-color: var(--background-color);
+     color: var(--text-color);
+     line-height: 1.6;
+     margin: 0;
+     padding: 0;
+     overflow-x: hidden;
+     /* Prevent horizontal scroll */
+ }
+ 
+ .container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 20px;
+     overflow: hidden;
+     /* Ensure content stays within container */
+ }
+ 
+ /* Navigation Styles */
+ nav {
+     position: fixed;
+     width: 100%;
+     z-index: 1000;
+     background: var(--nav-bg);
+     backdrop-filter: blur(10px);
+     border-bottom: 1px solid var(--secondary-color);
+     /* padding: 1rem 0; */
+     /* Reduced padding for mobile */
+ }
+ 
+ .nav-content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 1rem;
+     /* Add padding to nav content */
+ }
+ 
+ .logo {
+     font-size: 1.75rem;
+     font-weight: 700;
+     color: var(--light);
+     text-decoration: none;
+     position: relative;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+ }
+ 
+ .logo::before {
+     content: "";
+     width: 8px;
+     height: 8px;
+     background: var(--accent-color);
+     border-radius: 50%;
+     margin-right: 4px;
+     animation: pulse 2s infinite;
+ }
+ 
+ .nav-links {
+     display: flex;
+     gap: 3rem;
+     align-items: center;
+ }
+ 
+ .nav-links a {
+     color: var(--text-secondary);
+     text-decoration: none;
+     font-weight: 500;
+     font-size: 1rem;
+     transition: all 0.3s ease;
+     position: relative;
+ }
+ 
+ .nav-links a:hover {
+     transform: scale(1.5);
+     color: var(--light);
+     text-shadow: 3px 4px 5px white;
+ }
+ 
+ .nav-links a::after {
+     content: "";
+     position: absolute;
+     width: 0%;
+     height: 2px;
+     background: var(--accent-color);
+     bottom: -4px;
+     left: 0;
+     transition: width 0.3s ease;
+ }
+ 
+ .nav-links a:hover::after {
+     width: 100%;
+ }
+ 
+ /* Mobile Navigation Styles */
+ .menu-toggle {
+     display: none;
+     background: none;
+     border: none;
+     color: var(--text-color);
+     font-size: 1.5rem;
+     cursor: pointer;
+     padding: 0.5rem;
+     transition: color 0.3s ease;
+ }
+ 
+ .menu-toggle:hover {
+     color: var(--accent-color);
+ }
+ 
+ /* Hero Styles */
+ .hero {
+     min-height: 100vh;
+     display: flex;
+     align-items: center;
+     background: var(--gradient);
+     position: relative;
+     overflow: hidden;
+     padding: 100px 0;
+     /* Reduced padding for mobile */
+ }
+ 
+ .hero::before,
+ .hero::after {
+     content: "";
+     position: absolute;
+     width: 200px;
+     /* Reduced size */
+     height: 200px;
+     /* Reduced size */
+     border-radius: 50%;
+     filter: blur(80px);
+     /* Reduced blur */
+ }
+ 
+ .hero::before {
+     background: #116466;
+     top: 20%;
+     /* Adjusted position */
+     left: -10%;
+     /* Adjusted position */
+ }
+ 
+ .hero::after {
+     background: var(--primary-color);
+     bottom: -10%;
+     /* Adjusted position */
+     right: -10%;
+     /* Adjusted position */
+ }
+ 
+ .hero-content {
+     display: flex;
+     flex-direction: column;
+     /* Stack sections vertically */
+     align-items: center;
+     /* Center content horizontally */
+     position: relative;
+     z-index: 1;
+     text-align: center;
+     /* Center text in mobile */
+ }
+ 
+ /* About Page Styles */
+ .about-page {
+     padding-top: 80px;
+     /* Adjust for fixed navigation */
+     position: relative;
+     /* For background animation */
+     overflow: hidden;
+ }
+ 
+ /* Animated Background */
+ .about-page::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(45deg, rgba(17, 100, 102, 0.3), rgba(217, 176, 140, 0.3));
+     z-index: -1;
+     animation: animatedBackground 10s infinite alternate;
+ }
+ 
+ @keyframes animatedBackground {
+     0% {
+         transform: translateY(0);
+     }
+ 
+     100% {
+         transform: translateY(-30px);
+     }
+ }
+ 
+ .about-section {
+     display: flex;
+     gap: 20px;
+     /* Reduced gap */
+     align-items: center;
+     margin-bottom: 30px;
+     /* Reduced margin */
+     animation: fadeInUp 1s ease-in-out;
+     background-color: rgba(30, 41, 59, 0.5);
+     /* Increased opacity */
+     padding: 20px;
+     /* Reduced padding */
+     border-radius: 10px;
+     /* Reduced radius */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     transition: transform 0.3s ease;
+     width: 100%;
+     /* Take full width */
+     box-sizing: border-box;
+     /* Include padding and border in width */
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .about-section:hover {
+     /* transform: translateY(-5px); */
+ }
+ 
+ .about-image {
+     flex: 1;
+     max-width: 250px;
+     /* Reduced max-width */
+     overflow: hidden;
+     border-radius: 8px;
+     /* Reduced radius */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     transition: transform 0.5s ease-in-out;
+ }
+ 
+ .about-image img {
+     width: 100%;
+     border-radius: 8px;
+     /* Reduced radius */
+     transition: transform 0.5s ease-in-out;
+     object-fit: cover;
+     /* Maintain aspect ratio */
+     height: 100%;
+     /* Ensure image fills container */
+ }
+ 
+ .about-image:hover img {
+     transform: scale(1.1);
+ }
+ 
+ .about-content {
+     flex: 2;
+     text-align: left;
+ }
+ 
+ .about-content h1 {
+     font-size: 1.8rem;
+     /* Reduced font size */
+     margin-bottom: 10px;
+     /* Reduced margin */
+     color: var(--text-color);
+     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+     position: relative;
+     /* For underline animation */
+     padding-bottom: 8px;
+     /* Reduced padding */
+ }
+ 
+ .about-content h1::after {
+     content: "";
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     width: 0;
+     height: 2px;
+     /* Reduced height */
+     background-color: var(--accent-color);
+     transition: width 0.5s ease;
+ }
+ 
+ .about-content:hover h1::after {
+     width: 100%;
+ }
+ 
+ .about-content p {
+     margin-bottom: 10px;
+     /* Reduced margin */
+     color: var(--text-secondary);
+     line-height: 1.6;
+     /* Reduced line-height */
+     position: relative;
+     /* For typewriter effect */
+     overflow: hidden;
+     white-space: nowrap;
+     /* Typewriter effect */
+     animation: typewriter 4s steps(40, end) forwards,
+     blinkingCursor .75s step-end infinite;
+     font-size: 0.9rem;
+     /* Reduced font size */
+ }
+ 
+ /* Typewriter effect */
+ @keyframes typewriter {
+     from {
+         width: 0;
+     }
+ 
+     to {
+         width: 100%;
+     }
+ }
+ 
+ /* Blinking cursor effect */
+ @keyframes blinkingCursor {
+     from,
+     to {
+         border-color: transparent
+     }
+ 
+     50% {
+         border-color: var(--accent-color);
+     }
+ }
+ 
+ .contact-info p {
+     margin-bottom: 6px;
+     /* Reduced margin */
+     color: var(--text-secondary);
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     /* Reduced gap */
+     transition: color 0.3s ease;
+     font-size: 0.9rem;
+     /* Reduced font size */
+ }
+ 
+ .contact-info p:hover {
+     color: var(--text-color);
+ }
+ 
+ .contact-info i {
+     color: var(--primary-color);
+     transition: transform 0.3s ease;
+ }
+ 
+ .contact-info i:hover {
+     transform: scale(1.2);
+ }
+ 
+ .social-links {
+     display: flex;
+     gap: 10px;
+     /* Reduced gap */
+     margin-top: 15px;
+     /* Reduced margin */
+ }
+ 
+ .social-links a {
+     color: var(--text-color);
+     font-size: 1.2rem;
+     /* Reduced font size */
+     transition: var(--transition);
+ }
+ 
+ .social-links a:hover {
+     color: var(--accent-color);
+     transform: translateY(-3px);
+ }
+ 
+ .resume-button {
+     display: inline-block;
+     padding: 10px 18px;
+     /* Reduced padding */
+     background-color: var(--primary-color);
+     color: var(--text-color);
+     text-decoration: none;
+     border-radius: 4px;
+     /* Reduced radius */
+     font-weight: 500;
+     transition: var(--transition);
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     position: relative;
+     overflow: hidden;
+     /* For ripple effect */
+     font-size: 0.9rem;
+     /* Reduced font size */
+ }
+ 
+ .resume-button:hover {
+     background-color: var(--secondary-color);
+     color: var(--background-color);
+     transform: translateY(-3px);
+ }
+ 
+ /* Ripple effect */
+ .resume-button::before {
+     content: "";
+     position: absolute;
+     top: var(--y);
+     left: var(--x);
+     transform: translate(-50%, -50%);
+     background: rgba(255, 255, 255, 0.3);
+     width: 0;
+     height: 0;
+     border-radius: 50%;
+     transition: width 0.5s ease, height 0.5s ease;
+ }
+ 
+ .resume-button:hover::before {
+     width: 250px;
+     /* Reduced size */
+     height: 250px;
+     /* Reduced size */
+ }
+ 
+ /* Skills Section Styles */
+ .skills-section {
+     margin-bottom: 30px;
+     /* Reduced margin */
+     animation: fadeInUp 1s ease-in-out;
+     width: 100%;
+     /* Take full width */
+     box-sizing: border-box;
+     /* Include padding and border in width */
+     background-color: rgba(30, 41, 59, 0.5);
+     padding: 20px;
+     /* Reduced padding */
+     border-radius: 10px;
+     /* Reduced radius */
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .skills-section:hover {
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .skills-section h2 {
+     font-size: 1.6rem;
+     /* Reduced font size */
+     margin-bottom: 15px;
+     /* Reduced margin */
+     color: var(--text-color);
+     position: relative;
+     /* For icon */
+     padding-left: 30px;
+     /* Reduced padding */
+     /* Space for icon */
+     text-align: left;
+ }
+ 
+ .skills-section h2::before {
+     content: "\f00b";
+     /* Code for code icon */
+     font-family: FontAwesome;
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.2rem;
+     /* Reduced font size */
+     color: var(--accent-color);
+ }
+ 
+ .skills-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+     /* Reduced minmax */
+     gap: 15px;
+     /* Reduced gap */
+ }
+ 
+ .skill-card {
+     background-color: rgba(30, 41, 59, 0.5);
+     padding: 15px;
+     /* Reduced padding */
+     border-radius: 8px;
+     /* Reduced radius */
+     text-align: center;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+ }
+ 
+ .skill-card:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+     /* Enhanced shadow */
+ }
+ 
+ .skill-card i {
+     font-size: 2.5rem;
+     /* Reduced font size */
+     color: var(--primary-color);
+     margin-bottom: 8px;
+     /* Reduced margin */
+     transition: transform 0.3s ease;
+ }
+ 
+ .skill-card:hover i {
+     transform: scale(1.1);
+ }
+ 
+ .skill-card h3 {
+     font-size: 1.1rem;
+     /* Reduced font size */
+     color: var(--text-color);
+     margin-bottom: 8px;
+     /* Reduced margin */
+ }
+ 
+ .skill-bar {
+     background-color: #333;
+     height: 6px;
+     /* Reduced height */
+     border-radius: 4px;
+     /* Reduced radius */
+     margin-top: 12px;
+     /* Reduced margin */
+     overflow: hidden;
+ }
+ 
+ .skill-level {
+     background-color: var(--accent-color);
+     height: 100%;
+     border-radius: 4px;
+     /* Reduced radius */
+     width: 0;
+     /* Initial width for animation */
+     animation: fillSkillBar 1.5s ease-in-out forwards;
+     /* Animate the skill bar */
+ }
+ 
+ @keyframes fillSkillBar {
+     from {
+         width: 0;
+     }
+ 
+     to {
+         width: 100%;
+         /* The width is set inline in the HTML */
+     }
+ }
+ 
+ /* Interests Section Styles */
+ .interests-section {
+     animation: fadeInUp 1s ease-in-out;
+     background-color: rgba(30, 41, 59, 0.5);
+     /* Increased opacity */
+     padding: 20px;
+     /* Reduced padding */
+     border-radius: 10px;
+     /* Reduced radius */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     width: 100%;
+     /* Take full width */
+     box-sizing: border-box;
+     /* Include padding and border in width */
+     margin-bottom: 30px;
+     /* Reduced margin */
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .interests-section h2 {
+     font-size: 1.6rem;
+     /* Reduced font size */
+     margin-bottom: 15px;
+     /* Reduced margin */
+     color: var(--text-color);
+     position: relative;
+     /* For icon */
+     padding-left: 30px;
+     /* Reduced padding */
+     /* Space for icon */
+     text-align: left;
+ }
+ 
+ .interests-section h2::before {
+     content: "\f005";
+     /* Code for star icon */
+     font-family: FontAwesome;
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.2rem;
+     /* Reduced font size */
+     color: var(--accent-color);
+ }
+ 
+ .interests-section p {
+     margin-bottom: 10px;
+     /* Reduced margin */
+     color: var(--text-secondary);
+     font-size: 0.9rem;
+     /* Reduced font size */
+ }
+ 
+ .interests-section ul {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     flex-wrap: wrap;
+     gap: 10px;
+     /* Reduced gap */
+     justify-content: center;
+ }
+ 
+ .interests-section li {
+     margin-bottom: 6px;
+     /* Reduced margin */
+     color: var(--text-secondary);
+     display: flex;
+     align-items: center;
+     gap: 6px;
+     /* Reduced gap */
+     background-color: rgba(50, 60, 70, 0.7);
+     /* Add background to list items */
+     padding: 8px 12px;
+     /* Reduced padding */
+     border-radius: 15px;
+     /* Reduced radius */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     /* Enhanced shadow */
+     position: relative;
+     overflow: hidden;
+     /* For shining border */
+     font-size: 0.85rem;
+     /* Reduced font size */
+ }
+ 
+ .interests-section li:hover {
+     transform: scale(1.05);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+     /* Enhanced shadow */
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .interests-section li i {
+     color: var(--accent-color);
+     transition: transform 0.3s ease;
+ }
+ 
+ .interests-section li:hover i {
+     transform: scale(1.1);
+ }
+ 
+ /* Shining border animation */
+ .interests-section li::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border-radius: 15px;
+     /* Reduced radius */
+     background: linear-gradient(45deg, var(--gold-color), transparent, transparent, var(--gold-color));
+     z-index: -1;
+     pointer-events: none;
+     animation: shiningBorder 4s linear infinite;
+ }
+ 
+ @keyframes shiningBorder {
+     0% {
+         transform: rotate(0deg);
+     }
+ 
+     100% {
+         transform: rotate(360deg);
+     }
+ }
+ 
+ /* Achievements Section Styles */
+ .achievements-section {
+     animation: fadeInUp 1s ease-in-out;
+     width: 100%;
+     /* Take full width */
+     box-sizing: border-box;
+     /* Include padding and border in width */
+     background-color: rgba(30, 41, 59, 0.5);
+     padding: 20px;
+     /* Reduced padding */
+     border-radius: 10px;
+     /* Reduced radius */
+     border: 2px solid var(--accent-color);
+     /* Add border on hover */
+ }
+ 
+ .achievements-section h2 {
+     font-size: 1.6rem;
+     /* Reduced font size */
+     margin-bottom: 15px;
+     /* Reduced margin */
+     color: var(--text-color);
+     position: relative;
+     /* For icon */
+     padding-left: 30px;
+     /* Reduced padding */
+     /* Space for icon */
+     text-align: left;
+ }
+ 
+ .achievements-section h2::before {
+     content: "\f091";
+     /* Code for flag icon */
+     font-family: FontAwesome;
+     position: absolute;
+     left: 0;
+     top: 50%;
+     transform: translateY(-50%);
+     font-size: 1.2rem;
+     /* Reduced font size */
+     color: var(--accent-color);
+ }
+ 
+ .achievements-list {
+     list-style: none;
+     padding: 0;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     /* Reduced gap */
+ }
+ 
+ .achievement-item {
+     color: var(--text-secondary);
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     /* Reduced gap */
+     background-color: rgba(30, 41, 59, 0.5);
+     padding: 15px;
+     /* Reduced padding */
+     border-radius: 8px;
+     /* Reduced radius */
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     position: relative;
+     overflow: hidden;
+     border: 2px solid;
+     /* Add a border */
+     border-image: linear-gradient(45deg, var(--achievement-shine-color1), var(--achievement-shine-color2), var(--achievement-shine-color3)) 1;
+     /* Gradient border color */
+     animation: shine 4s linear infinite;
+     /* Add animation for shiny effect */
+     width: 100%;
+     /* Ensure items take full width */
+     box-sizing: border-box;
+     /* Include padding and border in width */
+     font-size: 0.9rem;
+     /* Reduced font size */
+ }
+ 
+ @keyframes shine {
+     0% {
+         border-image: linear-gradient(45deg, var(--achievement-shine-color1), var(--achievement-shine-color2), var(--achievement-shine-color3)) 1;
+     }
+ 
+     50% {
+         border-image: linear-gradient(45deg, var(--achievement-shine-color3), var(--achievement-shine-color2), var(--achievement-shine-color1)) 1;
+     }
+ 
+     100% {
+         border-image: linear-gradient(45deg, var(--achievement-shine-color1), var(--achievement-shine-color2), var(--achievement-shine-color3)) 1;
+     }
+ }
+ 
+ .achievement-item:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+     /* Enhanced shadow */
+ }
+ 
+ .achievement-item i {
+     font-size: 1.2rem;
+     /* Reduced font size */
+     color: var(--accent-color);
+     transition: transform 0.3s ease;
+ }
+ 
+ .achievement-item:hover i {
+     transform: scale(1.1);
+ }
+ 
+ /* Animations */
+ @keyframes fadeInUp {
+     from {
+         transform: translateY(50px);
+         opacity: 0;
+     }
+ 
+     to {
+         transform: translateY(0);
+         opacity: 1;
+     }
+ }
+ 
+ /* Add a subtle animation to the text */
+ .animated-text {
+     animation: fadeIn 1.5s ease-in-out;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+ 
+     to {
+         opacity: 1;
+     }
+ }
+ 
+ /* Media Queries */
+ @media (max-width: 992px) {
+     .container {
+         padding: 15px;
+         /* Further reduce padding */
+     }
+ 
+     .hero {
+         padding: 60px 15px;
+         /* Further reduce padding */
+     }
+ 
+     .hero-content {
+         text-align: center;
+     }
+ 
+     .about-section {
+         flex-direction: column;
+         text-align: center;
+     }
+ 
+     .about-image {
+         max-width: 100%;
+         /* Full width on smaller screens */
+         margin: 0 auto 20px;
+         /* Center and add margin */
+     }
+ 
+     .skills-grid {
+         grid-template-columns: repeat(2, 1fr);
+         /* Two columns on medium screens */
+     }
+ 
+     .interests-section ul {
+         justify-content: center;
+         /* Center interests */
+     }
+ }
+ 
+ @media (max-width: 768px) {
+     .about-content {
+         text-align: center;
+     }
+     .about-content h1 {
+         font-size: 1.6rem;
+     }
+ 
+     .about-content p {
+         font-size: 0.8rem;
+         white-space: normal; /* Remove nowrap for mobile */
+     }
+     .nav-links {
+         display: none;
+         position: absolute;
+         top: 100%;
+         left: 0;
+         width: 100%;
+         background: var(--nav-bg);
+         flex-direction: column;
+         align-items: center;
+         padding: 1rem 0;
+         gap: 1rem;
+         border-bottom: 1px solid var(--secondary-color);
+     }
+ 
+     .nav-links.active {
+         display: flex;
+     }
+ 
+     .nav-links a {
+         padding: 0.75rem 1.5rem;
+         width: 80%;
+         /* Adjust width as needed */
+         text-align: center;
+         border-radius: 5px;
+         background-color: rgba(255, 255, 255, 0.05);
+         /* Subtle background */
+     }
+ 
+     .menu-toggle {
+         display: block;
+     }
+ 
+     .nav-content {
+         padding: 0.5rem 1rem;
+         /* Adjust padding for mobile */
+     }
+ 
+     .skills-grid {
+         grid-template-columns: repeat(1, 1fr);
+         /* One column on small screens */
+     }
+ 
+     .interests-section ul {
+         flex-direction: column;
+         align-items: center;
+     }
+     .skills-section h2, .interests-section h2, .achievements-section h2 {
+         text-align: center;
+         padding-left: 0; /* Reset padding */
+     }
+     .skills-section h2::before, .interests-section h2::before, .achievements-section h2::before {
+         position: relative;
+         display: block; /* Ensure the icons are visible */
+         left: auto;
+         right: auto;
+         top: auto;
+         bottom: auto;
+         transform: none;
+         margin: 0 auto 10px; /* Center the icons */
+     }
+     .achievements-section {
+         padding: 15px;
+     }
+     .achievement-item{
+     text-align: center;
+     }
+ }
+ 
+ @media (max-width: 576px) {
+     .hero {
+         padding: 40px 10px;
+         /* Further reduce padding */
+     }
+ 
+     .hero::before,
+     .hero::after {
+         width: 150px;
+         /* Further reduce size */
+         height: 150px;
+         /* Further reduce size */
+         filter: blur(60px);
+         /* Further reduce blur */
+     }
+ 
+     .about-content h1 {
+         font-size: 1.5rem;
+         /* Further reduce font size */
+     }
+ 
+     .about-content p {
+         font-size: 0.85rem;
+         /* Further reduce font size */
+     }
+ 
+     .social-links {
+         justify-content: center;
+         /* Center social links */
+     }
+ 
+ }
+ /* Adjustments for smaller screens */
+ @media (max-width: 768px) {
+     .about-section {
+         flex-direction: column; /* Stack image and content */
+         text-align: center;      /* Center content */
+     }
+     .about-image {
+         max-width: 60%;         /* Image takes full width */
+         margin-bottom: 20px;     /* Add space between image and content */
+     }
+     .about-content {
+         text-align: center;      /* Center-align text */
+     }
+     .about-content p {
+         white-space: normal; /* Remove nowrap for mobile */
+     }
+ }
+ 
+ /* Further refinements for extra small screens */
+ @media (max-width: 480px) {
+     .container {
+         padding: 10px; /* Further reduce padding */
+     }
+     .about-content h1 {
+         font-size: 1.4rem; /* Further reduce h1 size */
+     }
+     .about-content p {
+         font-size: 0.8rem; /* Further reduce p size */
+     }
+ 
+ }
