@@ -27,22 +27,14 @@
 
             .hero-image-container {
                 display: none !important;
-                /* Hide the image container on mobile */
                 flex: 1 1 100% !important;
                 padding-top: 20px !important;
                 padding-right: 0 !important;
             }
 
-            .hero-image-container img {
-                width: 100% !important;
-                height: auto !important;
-                padding-top: 0 !important;
-            }
-
             .hero-content .button-group {
                 flex-direction: column !important;
                 align-items: stretch !important;
-
             }
 
             .hero-content .button-group a {
@@ -76,18 +68,18 @@
                 padding: 10px 10px !important;
             }
 
-             .nav-content{
+            .nav-content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
 
             .nav-links {
-                display: none; /* initially hide on mobile */
+                display: none;
                 flex-direction: column;
                 background-color: #f0f0f0;
                 position: absolute;
-                top: 60px; /* position below the navbar */
+                top: 60px;
                 right: 0;
                 width: 200px;
                 padding: 10px;
@@ -95,7 +87,7 @@
 
             .nav-links.active {
                 display: flex;
-                z-index: 1000; /* ensure it's above other content */
+                z-index: 1000;
             }
 
             .nav-links a {
@@ -105,9 +97,25 @@
                 text-align: left;
             }
 
+            /* Hide HOME link in mobile navbar */
+            .nav-links a[href="#home"] {
+                display: none;
+            }
+
             .menu-toggle {
                 display: block;
-                /* Show the menu toggle button on mobile */
+            }
+
+            /* Hide home section */
+            #home {
+                display: none;
+            }
+        }
+
+        /* Non-mobile views */
+        @media (min-width: 769px) {
+            #home {
+                display: flex !important;
             }
         }
 
@@ -134,11 +142,11 @@
         }
 
         .btn-primary:hover {
-            background-color: #0056b3; /* Darker shade for primary button */
+            background-color: #0056b3;
         }
 
         .btn-outline:hover {
-            background-color: #f0f0f0; /* Light gray for outline button */
+            background-color: #f0f0f0;
             color: #333;
         }
 
@@ -164,7 +172,6 @@
 </head>
 
 <body>
-
     <nav>
         <div class="container nav-content">
             <div class="logo">My Portfolio</div>
@@ -178,7 +185,9 @@
                 <a href="#contact">CONTACT</a>
             </div>
         </div>
+        <div class="mobile-subtitle">Full Stack Developer with AI</div>
     </nav>
+
     <section id="home" class="hero" style="padding: 100px 50px 0; position: relative;">
         <div class="container" style="max-width: 1600px; display: flex; justify-content: space-between;">
             <div class="hero-content" style="flex: 0 1 70%; padding-right: 40px; margin-bottom: 20px;">
@@ -187,8 +196,7 @@
                     Full Stack Developer
                 </div>
                 <div class="hero-text">
-
-                    <h2 class="hero-subtitle" style="padding-top: 70px;z-index: 1;">Hello! I'm</h2>
+                    <h2 class="hero-subtitle" style="padding-top: 70px; z-index: 1;">Hello! I'm</h2>
                     <h1 class="hero-title">VARDINEEDI NANDINI</h1>
                     <h2 class="hero-subtitle"></h2>
                     <p class="description">Full-Stack Developer | AI Enthusiast | Innovator Crafting responsive web
@@ -208,22 +216,14 @@
                 </div>
             </div>
             <div class="hero-image-container" style="padding-top: 50px; padding-right: 50px;">
-                <div
-                    style="height: 400px;width: 400px;padding-bottom: 250px; border-radius: 30%;">
+                <div style="height: 400px; width: 400px; padding-bottom: 250px; border-radius: 30%;">
                     <img src="actual.png"
-                        style="width: 1000px; height:600px; padding-top: 50px; padding-right: 50px;padding-bottom: 50px; ">
+                        style="width: 1000px; height: 600px; padding-top: 50px; padding-right: 50px; padding-bottom: 50px;">
                 </div>
-                <!-- <a href="https://github.com/nandinivardhineedi" class="icon top-left" data-tooltip="GitHub" style="font-size: 1.8em; position: absolute; color: #555; top: 20px; left: 20px;"><i
-                        class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" class="icon top-right"
-                    data-tooltip="LinkedIn" style="font-size: 1.8em; position: absolute; color: #555; top: 20px; right: 20px;"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="icon bottom-left" data-tooltip="Twitter" style="font-size: 1.8em; position: absolute; color: #555; bottom: 20px; left: 20px;"><i class="fab fa-twitter"></i></a>
-                <a href="https://www.instagram.com/nandu_vardhineedi/" class="icon bottom-right"
-                    data-tooltip="Instagram" style="font-size: 1.8em; position: absolute; color: #555; bottom: 20px; right: 20px;"><i class="fab fa-instagram"></i></a> -->
             </div>
         </div>
-
     </section>
+
     <section id="about" class="hero">
         <div class="container hero-content">
             <section class="about-section">
@@ -235,13 +235,12 @@
                     <p class="animated-text">Hello! I'm Nandini Vardhineedi, a passionate B.Tech student with a strong
                         interest in full-stack development <br> and AI-driven solutions. I thrive on creating innovative
                         projects that solve real-world problems.</p>
-
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> nandinivardhineedi@sasi.ac.in</p>
                         <p><i class="fas fa-phone"></i> +91 9014926311</p>
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/"
-                                aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin"></i></a>
                             <a href="#" aria-label="Codechef"><i class="fas fa-code"></i></a>
                             <a href="https://github.com/nandinivardhineedi" aria-label="GitHub"><i
                                     class="fab fa-github"></i></a>
@@ -337,10 +336,8 @@
                     </li>
                     <li class="achievement-item">
                         <i class="fas fa-certificate"></i>
-                        NSS Voluteer
+                        NSS Volunteer
                     </li>
-
-
                 </ul>
             </section>
         </div>
@@ -353,12 +350,12 @@
                 <div class="projects-grid">
                     <div class="project-card">
                         <h3>Project 1: Potify</h3>
-                        <p>Developed a fully functional Music web application using HTML,CSS and Nodejs.</p>
+                        <p>Developed a fully functional Music web application using HTML, CSS and Node.js.</p>
                         <a href="https://github.com/nandinivardhineedi">View Project</a>
                     </div>
                     <div class="project-card">
                         <h3>Project 2: AI-Powered Chatbot</h3>
-                        <p>Created an AI-powered Medical chatbot using Python,RAG and TensorFlow .</p>
+                        <p>Created an AI-powered Medical chatbot using Python, RAG and TensorFlow.</p>
                         <a href="https://github.com/nandinivardhineedi">View Project</a>
                     </div>
                     <div class="project-card">
@@ -368,10 +365,9 @@
                     </div>
                     <div class="project-card">
                         <h3>Project 4: MyPortfolio</h3>
-                        <p>Built a responsive portfolio website using HTML,CSS and JavaScript.</p>
+                        <p>Built a responsive portfolio website using HTML, CSS and JavaScript.</p>
                         <a href="https://github.com/nandinivardhineedi">View Project</a>
                     </div>
-
                 </div>
             </section>
         </div>
@@ -398,11 +394,7 @@
                 </div>
             </div>
         </div>
-
     </section>
-
-
-
 
     <div class="social-strip">
         <a href="https://github.com/nandinivardhineedi" class="social-icon"><i class="fab fa-github"></i></a>
@@ -440,9 +432,10 @@
             });
         });
     </script>
+
     <script>
         (function () {
-            emailjs.init('y1mz8WaidXiaKd9rS'); // Replace with your EmailJS Public Key
+            emailjs.init('y1mz8WaidXiaKd9rS');
         })();
 
         document.addEventListener('DOMContentLoaded', function () {
@@ -467,9 +460,8 @@
             }
         }
 
-
         document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault(); // Prevents the default form submission
+            event.preventDefault();
             const messageContainer = document.getElementById('message-container');
             const messageText = document.getElementById('message-text');
 
@@ -477,15 +469,13 @@
             var email = this.from_email.value;
             var message = this.message.value;
 
-            // Test email send call
             emailjs.send('service_s5kbqyo', 'template_1m5sfig', {
-                    from_name: 'test',
-                    from_email: 'test@example.com',
-                    message: 'This is a test message',
-                })
+                from_name: 'test',
+                from_email: 'test@example.com',
+                message: 'This is a test message',
+            })
                 .then(response => {
                     console.log('Test Email Sent!', response);
-                    // Send email using EmailJS with user form data
                     return emailjs.send('service_s5kbqyo', 'template_1m5sfig', {
                         from_name: name,
                         from_email: email,
@@ -494,20 +484,11 @@
                 })
                 .then(function (response) {
                     messageText.textContent = 'Message sent successfully!';
-                    // Update message text
                     messageContainer.classList.add('show');
-                    // Show the message box
                     document.getElementById('contact-form').reset();
                     console.log('SUCCESS!', response.status, response.text);
                 }, function (error) {
-                    let errorMessage = 'Message sent Successfully!!.';
-                    // if (error && typeof error === 'object' && error !== null){
-                    //   errorMessage += `\nDetails: ${JSON.stringify(error)}`;
-                    // }else if (error){
-                    // errorMessage +=`\nError: ${error}`
-                    // }
-                    // messageText.textContent = errorMessage;
-                    // messageContainer.classList.add('show');
+                    let errorMessage = 'Message sent Successfully!.';
                     console.error(error, '...');
                 });
         });
@@ -517,6 +498,7 @@
             messageContainer.classList.remove('show');
         }
     </script>
+
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
     <script>
@@ -527,11 +509,11 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    observer.unobserve(entry.target); // Stop observing after animating once
+                    observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.2 // Adjust as needed (0.2 means 20% of the section is visible)
+            threshold: 0.2
         });
 
         sections.forEach(section => {
@@ -539,6 +521,14 @@
         });
     </script>
 
+    <script>
+        // Redirect to About section on mobile
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.innerWidth <= 768) {
+                window.location.hash = '#about';
+            }
+        });
+    </script>
 </body>
 
 </html>
