@@ -1,0 +1,274 @@
+/* --- Root Variables & Global Styles --- */
+:root {
+  --card-border: rgba(100, 116, 139, 0.3);
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-slow: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* --- Grid & Card Base Styles --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+    background: linear-gradient(135deg, rgba(1, 9, 51, 0.1), rgba(21, 58, 138, 0.05));
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition-slow);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--glow-color), var(--secondary-accent)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* --- Certificate Card Specifics --- */
+.certificate-card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.certificate-card:hover .card-img {
+  filter: brightness(1.1);
+}
+
+.card-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--glow-color);
+  margin-top: auto;
+}
+/* --- Root Variables & Global Styles --- */
+:root {
+  --card-border: rgba(100, 116, 139, 0.3);
+  --transition-fast: all 0.2s ease-in-out;
+  --transition-slow: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- Grid & Card Base Styles --- */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: var(--transition-slow);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 12px;
+  border: 2px solid transparent;
+  background: linear-gradient(135deg, var(--glow-color), var(--secondary-accent)) border-box;
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: var(--transition-fast);
+  /* === THIS IS THE FIX === */
+  /* It makes the glowing border layer unclickable, allowing clicks to pass through. */
+  pointer-events: none;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.card-body {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.card-description {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+/* --- Certificate Card Specifics --- */
+.certificate-card .card-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.certificate-card:hover .card-img {
+  filter: brightness(1.1);
+}
+
+.card-date {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--glow-color);
+  margin-top: auto;
+}
+
+/* --- Project Card Specifics --- */
+.project-card {
+  display: flex;
+  background: linear-gradient(135deg, rgba(1, 9, 51, 0.1), rgba(21, 58, 138, 0.05));
+}
+
+.tech-stack {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  color: var(--text-secondary);
+}
+
+.tech-stack i {
+  transition: var(--transition-fast);
+}
+
+.tech-stack i:hover {
+  color: var(--glow-color);
+  transform: scale(1.2);
+}
+
+.btn-project {
+  display: inline-block;
+  background-color: var(--primary);
+  color: var(--text-primary);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  margin-top: auto;
+  text-align: center;
+}
+
+.btn-project:hover {
+  /* background-color: var(--glow-color); */
+  color: var(--dark);
+  /* transform: translateY(-3px); */
+  /* box-shadow: 0 4px 15px rgba(110, 218, 227, 0.4); */
+}
+
+.btn-project i {
+  margin-left: 8px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.btn-project:hover i {
+  transform: translateX(5px);
+}
+
+/* --- Modal Styles --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 90vh;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.close:hover, .close:focus {
+  color: var(--glow-color);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .grid-layout { grid-template-columns: 1fr; }
+}

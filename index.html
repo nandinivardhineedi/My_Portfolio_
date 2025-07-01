@@ -5,168 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Portfolio - Nandini Vardhineedi</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheets -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="about1.css">
+    <link rel="stylesheet" href="achivements.css">
+    <link rel="stylesheet" href="certificates.css">
     <link rel="stylesheet" href="contact.css">
     <style>
-        /* Responsive adjustments using media queries */
+        /* This inline style block is kept for your original responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 max-width: 95% !important;
                 padding: 10px !important;
             }
-
             .hero-content {
                 flex: 1 1 100% !important;
                 padding-right: 0 !important;
                 margin-bottom: 15px !important;
             }
-
             .hero-image-container {
                 display: none !important;
-                flex: 1 1 100% !important;
-                padding-top: 20px !important;
-                padding-right: 0 !important;
             }
-
             .hero-content .button-group {
                 flex-direction: column !important;
                 align-items: stretch !important;
             }
-
             .hero-content .button-group a {
                 margin-bottom: 10px;
             }
-
             .contact-section {
                 width: 100% !important;
             }
-
             .contact-wrapper {
                 flex-direction: column !important;
                 align-items: stretch !important;
                 gap: 10px !important;
             }
-
             .image-container {
                 margin-right: 0 !important;
                 margin-bottom: 15px !important;
             }
-
             .form-container {
                 width: 100% !important;
             }
-
             .social-strip {
                 margin-top: 15px !important;
             }
-
             nav {
                 padding: 10px 10px !important;
             }
-
             .nav-content {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
             }
-
             .nav-links {
                 display: none;
                 flex-direction: column;
-                background-color: #f0f0f0;
+                background-color: #0f172a; /* Match dark theme */
                 position: absolute;
                 top: 60px;
                 right: 0;
                 width: 200px;
                 padding: 10px;
+                border: 1px solid #334155;
             }
-
             .nav-links.active {
                 display: flex;
                 z-index: 1000;
             }
-
             .nav-links a {
                 padding: 10px 20px;
-                border-bottom: 1px solid #ccc;
+                border-bottom: 1px solid #334155;
                 display: block;
                 text-align: left;
             }
-
-            /* Hide HOME link in mobile navbar */
             .nav-links a[href="#home"] {
                 display: none;
             }
-
             .menu-toggle {
                 display: block;
             }
-
-            /* Hide home section */
             #home {
                 display: none;
             }
         }
-
-        /* Non-mobile views */
         @media (min-width: 769px) {
             #home {
                 display: flex !important;
             }
-        }
-
-        /* Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Section Fade-In Animation */
-        section {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease-out;
-        }
-
-        section.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Button Hover Transition */
-        .btn {
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            background-color: #0056b3;
-        }
-
-        .btn-outline:hover {
-            background-color: #f0f0f0;
-            color: #333;
-        }
-
-        /* Project Card Hover Effect */
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Social Icon Hover Effect */
-        .social-icon {
-            transition: transform 0.3s ease;
-        }
-
-        .social-icon:hover {
-            transform: scale(1.2);
         }
     </style>
 </head>
@@ -182,353 +115,344 @@
                 <a href="#home">HOME</a>
                 <a href="#about">ABOUT</a>
                 <a href="#projects">PROJECTS</a>
+                <a href="#certifications">CERTIFICATIONS</a>
                 <a href="#contact">CONTACT</a>
             </div>
         </div>
         <div class="mobile-subtitle">Full Stack Developer with AI</div>
     </nav>
 
-    <section id="home" class="hero" style="padding: 100px 50px 0; position: relative;">
-        <div class="container" style="max-width: 1600px; display: flex; justify-content: space-between;">
-            <div class="hero-content" style="flex: 0 1 70%; padding-right: 40px; margin-bottom: 20px;">
-                <div class="hero-badge" style="position: absolute; top: 20px; left: 20px; z-index: 1;">
+    <div class="social-strip">
+        <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.codechef.com/users/nandu_v" class="social-icon"><i class="fas fa-globe"></i></a>
+                <a href="https://github.com/nandinivardhineedi" class="social-icon"><i class="fab fa-github"></i></a>
+
+        <a href="https://leetcode.com/u/nandu_v/" class="social-icon"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <!-- <div class="hero-content"> -->
+                <div class="hero-badge">
                     <i class="fas fa-code"></i>
                     Full Stack Developer
                 </div>
-                <div class="hero-text">
-                    <h2 class="hero-subtitle" style="padding-top: 70px; z-index: 1;">Hello! I'm</h2>
+                <!-- <div class="hero-text"> -->
+                    <h2 class="hero-subtitle">Hello! I'm</h2>
                     <h1 class="hero-title">VARDINEEDI NANDINI</h1>
-                    <h2 class="hero-subtitle"></h2>
-                    <p class="description">Full-Stack Developer | AI Enthusiast | Innovator Crafting responsive web
-                        solutions, scalable applications, and AI-powered projects with a passion for technology and
-                        innovation.</p>
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">4</div>
-                            <div class="stat-label">Projects Completed</div>
-                        </div>
-                    </div>
+                    <p class="description">Full-Stack Developer | AI Enthusiast | Innovator Crafting responsive web solutions, scalable applications, and AI-powered projects with a passion for technology and innovation.</p>
                     <div class="button-group">
-                        <a href="Nandini_Vardhineedi_Resume.pdf" class="btn btn-primary"
-                            download="Nandini_Vardhineedi_CV.pdf">Download CV</a>
-                        <a href="Nandini_Vardhineedi_Resume.pdf" class="btn btn-outline">View Resume</a>
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-outline">Get in Touch</a>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
-            <div class="hero-image-container" style="padding-top: 50px; padding-right: 50px;">
-                <div style="height: 400px; width: 400px; padding-bottom: 250px; border-radius: 30%;">
-                    <img src="actual.png"
-                        style="width: 1000px; height: 600px; padding-top: 50px; padding-right: 50px; padding-bottom: 50px;">
-                </div>
-            </div>
-        </div>
     </section>
 
-    <section id="about" class="hero">
-        <div class="container hero-content">
-            <section class="about-section">
-                <div class="about-image">
-                    <img src="My_long_photo copy.jpg" alt="Nandini Vardhineedi">
+    <section id="about">
+        <div class="container">
+            <div class="about-section-wrapper">
+                <div class="about-image-container">
+                    <div class="image-wrapper">
+                        <img src="My_long_photo copy.jpg" alt="Nandini Vardhineedi" class="profile-image">
+                    </div>
+                    <div class="status-badge">
+                        <div class="status-indicator"></div>
+                        Available for opportunities
+                    </div>
                 </div>
                 <div class="about-content">
-                    <h1>About Me</h1>
-                    <p class="animated-text">Hello! I'm Nandini Vardhineedi, a passionate B.Tech student with a strong
-                        interest in full-stack development <br> and AI-driven solutions. I thrive on creating innovative
-                        projects that solve real-world problems.</p>
-                    <div class="contact-info">
-                        <p><i class="fas fa-envelope"></i> nandinivardhineedi@sasi.ac.in</p>
-                        <p><i class="fas fa-phone"></i> +91 9014926311</p>
-                        <div class="social-links">
-                            <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" aria-label="LinkedIn"><i
-                                    class="fab fa-linkedin"></i></a>
-                            <a href="#" aria-label="Codechef"><i class="fas fa-code"></i></a>
-                            <a href="https://github.com/nandinivardhineedi" aria-label="GitHub"><i
-                                    class="fab fa-github"></i></a>
+                    <div class="name-title">
+                        <h1 class="name">Vardhineedi Nandini</h1>
+                        <p class="title">Full-Stack Developer & AI Solutions Engineer</p>
+                    </div>
+                    <p class="description">
+                        Results-driven Computer Science student with expertise in full-stack development and artificial intelligence integration.
+                        Specialized in creating scalable web applications and implementing AI-driven solutions that optimize business processes.
+                        Proven track record of delivering high-quality software solutions with a focus on performance, security, and user experience.
+                    </p>
+                    <div class="highlights">
+                        <div class="highlight-item"><i class="fas fa-code highlight-icon"></i><div class="highlight-text">Full-Stack Development</div><div class="highlight-subtext">End-to-end solutions</div></div>
+                        <div class="highlight-item"><i class="fas fa-brain highlight-icon"></i><div class="highlight-text">AI Integration</div><div class="highlight-subtext">Machine learning solutions</div></div>
+                        <div class="highlight-item"><i class="fas fa-database highlight-icon"></i><div class="highlight-text">Database Design</div><div class="highlight-subtext">Scalable architectures</div></div>
+                    </div>
+                    <div class="skills-section">
+                        <h3 class="skills-title">Technical Expertise</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">JavaScript</div><div class="skill-item">Python</div><div class="skill-item">React</div><div class="skill-item">Node.js</div><div class="skill-item">MongoDB</div><div class="skill-item">HTML/CSS</div><div class="skill-item">FASTAPI</div><div class="skill-item">SQL</div><div class="skill-item">Git</div>
                         </div>
                     </div>
-                    <a href="Nandini_Vardhineedi_Resume.pdf" class="resume-button" style="--x: 0; --y: 0;"
-                        onmousemove="this.style.setProperty('--x', event.offsetX + 'px'); this.style.setProperty('--y', event.offsetY + 'px');">View
-                        Resume</a>
-                </div>
-            </section>
-
-            <section class="skills-section">
-                <h2>My Skills</h2>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <i class="fab fa-html5"></i>
-                        <h3>HTML</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 95%;"></div>
-                        </div>
+                    <div class="education-item">
+                        <div class="education-title">Bachelor of Technology - Computer Science Specialized in IOT & CyberSecurity</div>
+                        <div class="education-institution">Sasi Institute of Technology & Engineering</div>
+                        <div class="education-year">Expected Graduation: 2026</div>
                     </div>
-                    <div class="skill-card">
-                        <i class="fab fa-css3-alt"></i>
-                        <h3>CSS</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-js"></i>
-                        <h3>JavaScript</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-react"></i>
-                        <h3>React</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-node-js"></i>
-                        <h3>Node.js</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-python"></i>
-                        <h3>Python</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-card">
-                        <i class="fab fa-github"></i>
-                        <h3>Git & GitHub</h3>
-                        <div class="skill-bar">
-                            <div class="skill-level" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="interests-section">
-                <h2>My Interests</h2>
-                <p>I'm passionate about:</p>
-                <ul>
-                    <li><i class="fas fa-code"></i> Web Development</li>
-                    <li><i class="fas fa-brain"></i> Artificial Intelligence</li>
-                    <li><i class="fas fa-robot"></i> Machine Learning</li>
-                    <li><i class="fas fa-puzzle-piece"></i> Problem Solving</li>
-                    <li><i class="fas fa-book"></i> Continuous Learning</li>
-                </ul>
-            </section>
-
-            <section class="achievements-section">
-                <h2>Achievements</h2>
-                <ul class="achievements-list">
-                    <li class="achievement-item">
-                        <i class="fas fa-trophy"></i>
-                        Secured 2nd place at Vijayawada AI Hackathon.
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-certificate"></i>
-                        Web Master at SITE ACM Student Chapter.
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-medal"></i>
-                        SIH Finalist 2024.
-                    </li>
-                    <li class="achievement-item">
-                        <i class="fas fa-certificate"></i>
-                        NSS Volunteer
-                    </li>
-                </ul>
-            </section>
-        </div>
-    </section>
-
-    <section id="projects" class="hero">
-        <div class="container hero-content">
-            <section class="projects-section">
-                <h2>My Projects</h2>
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <h3>Project 1: Potify</h3>
-                        <p>Developed a fully functional Music web application using HTML, CSS and Node.js.</p>
-                        <a href="https://github.com/nandinivardhineedi">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 2: AI-Powered Chatbot</h3>
-                        <p>Created an AI-powered Medical chatbot using Python, RAG and TensorFlow.</p>
-                        <a href="https://github.com/nandinivardhineedi">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 3: Assessment Website</h3>
-                        <p>Designed and developed a web application for Student Self-Assessment using HTML.</p>
-                        <a href="https://github.com/nandinivardhineedi">View Project</a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Project 4: MyPortfolio</h3>
-                        <p>Built a responsive portfolio website using HTML, CSS and JavaScript.</p>
-                        <a href="https://github.com/nandinivardhineedi">View Project</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </section>
-
-    <section id="contact" class="hero" style="padding: 100px 50px 0; position: relative;">
-        <div class="container hero-content" style="max-width: 1600px; display: flex; justify-content: space-between;">
-            <div class="contact-section"
-                style="flex: 0 1 70%; padding-right: 40px; margin-bottom: 20px; width: 1000px;">
-                <h2>Contact Me</h2>
-                <div class="contact-wrapper" style="display: flex; align-items: center; gap: 20px;">
-                    <div class="image-container" style="flex: 1; margin-right: 20px;">
-                        <img src="A Female Customer Service Person Holding Documents Appeared From The Phone 3D Illustration.png"
-                            alt="Contact Illustration" style="max-width: 90%; height: auto;">
-                    </div>
-                    <div class="form-container" style="flex: 1;">
-                        <form id="contact-form" class="contact-form" onmousemove="handleMouseMove(event)">
-                            <input type="text" name="from_name" placeholder="Your Name" required>
-                            <input type="email" name="from_email" placeholder="Your Email" required>
-                            <textarea name="message" placeholder="Your Message" required></textarea>
-                            <button type="submit" style="--x: 0; --y: 0;">Send Message</button>
-                        </form>
+                    
+                    <div class="cta-section">
+                        <a href="VardhineediNandini_Resume.pdf" class="btn btn-cta-primary" style="color: aliceblue;" target="_blank"><i class="fas fa-download"></i> Download Resume</a>
+                        <a href="#contact" class="btn btn-cta-secondary" style="color: aliceblue;"><i class="fas fa-envelope"></i> Contact Me</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class="social-strip">
-        <a href="https://github.com/nandinivardhineedi" class="social-icon"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" class="social-icon"><i
-                class="fab fa-linkedin"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <section id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievement Log</h2>
+            </div>
+            <div class="achievements-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content"><h3>AI Hackathon Victory</h3><p class="year">2024</p><p>Secured 2nd place at Vijayawada AI Hackathon, demonstrating innovative AI solutions.</p></div>
+                    <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content"><h3>Web Master Position</h3><p class="year">2024-25</p><p>Led web development initiatives as Web Master at SITE ACM Student Chapter.</p></div>
+                    <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content"><h3>SIH Finalist</h3><p class="year">2024</p><p>Reached finals in Smart India Hackathon 2024, showcasing innovation in technology solutions.</p></div>
+                    <div class="timeline-icon"><i class="fas fa-medal"></i></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content"><h3>NSS Volunteer</h3><p class="year">2023-26</p><p>Contributing to community service and social development through NSS initiatives.</p></div>
+                    <div class="timeline-icon"><i class="fas fa-handshake"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Featured Projects</h2>
+            <p>A selection of projects where I've applied my skills to create real-world solutions.</p>
+        </div>
+        <div class="grid-layout">
+            <!-- Project 1 -->
+            <div class="card project-card">
+                <div class="card-body">
+                    <h3 class="card-title">Public Complaints Routing</h3>
+                    <p class="card-description">AI-Enabled Public Service Complaint Analysis and Routing Develop an efficient platform that aggregates and analyzes citizen complaints from government portals, social media, and community forums to identify and prioritize local issues. Leverage natural language processing and clustering techniques on easily accessible data—sourced through APIs.</p>
+                    <div class="tech-stack">
+                       <i class="fa-solid fa-n"title="Next.js"></i>
+                        <i class="fa-brands fa-twitch" title="TypeScript"></i>
+                        <i class="fa-solid fa-brain" title="Machine Learning"></i>
+                    </div>
+                    <!-- CORRECTED LINK -->
+                    <a href="https://github.com/nandinivardhineedi/Public-Complaints-Routing" class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="card project-card">
+                <div class="card-body">
+                    <h3 class="card-title">AI-Powered Medical Chatbot</h3>
+                    <p class="card-description">An intelligent chatbot leveraging RAG and TensorFlow to provide accurate medical information and assistance.</p>
+                    <div class="tech-stack">
+                        <i class="fa-brands fa-python" title="Python"></i>
+                        <i class="fa-solid fa-brain" title="TensorFlow"></i>
+                        <i class="fa-solid fa-database" title="RAG"></i>
+                    </div>
+                    <!-- CORRECTED LINK -->
+                    <a href="https://github.com/nandinivardhineedi/medical-chatbot" class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="card project-card">
+                <div class="card-body">
+                    <h3 class="card-title">Student Self-Assessment Tool</h3>
+                    <p class="card-description">A responsive web application designed to help students evaluate their skills and track their learning progress.</p>
+                    <div class="tech-stack">
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                    <!-- CORRECTED LINK -->
+                    <a href="https://github.com/nandinivardhineedi/assessment-tool" class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <!-- Project 4 -->
+            <div class="card project-card">
+                <div class="card-body">
+                    <h3 class="card-title">Personal Portfolio Website</h3>
+                    <p class="card-description">A fully responsive personal portfolio built from scratch to showcase my skills, projects, and certifications.</p>
+                    <div class="tech-stack">
+                        <i class="fa-brands fa-html5" title="HTML5"></i>
+                        <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                    </div>
+                    <!-- This link was already correct -->
+                    <a href="https://github.com/nandinivardhineedi/portfolio" class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+             <div class="card project-card">
+                <div class="card-body">
+                    <h3 class="card-title">AI Basic to Advanced Projects</h3>
+                    <p class="card-description">A comprehensive guide that explores Python projects leveraging AI, ranging from beginner to advanced levels, to enhance programming skills through practical applications.</p>
+                    <div class="tech-stack">
+                        <i class="fa-brands fa-python" title="Python"></i>
+                        <i class="fa-solid fa-brain" title="ML"></i>
+                    </div>
+                    <!-- This link was already correct -->
+                    <a href="https://github.com/nandinivardhineedi/Python_using_AI_Basic-to-advanced-projects" class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+    <section id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Credentials & Certifications</h2>
+                <p>A showcase of my commitment to continuous learning and skill development.</p>
+            </div>
+            <div class="grid-layout">
+                <div class="card certificate-card"><img class="card-img" src="GuviCertification - 214FSW793b88141OD7.png" alt="Generative AI & Python Certificate from GUVI" onclick="openModal('GuviCertification - 214FSW793b88141OD7.png')"><div class="card-body"><h3 class="card-title">Generative AI & Python</h3><p class="card-description">Completed a hands-on program focused on Python programming and the practical application of Generative AI models.</p><span class="card-date">Issued: March 2025</span></div></div>
+                <div class="card certificate-card"><img class="card-img" src="Screenshot_2025-06-19-08-31-00-54_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="React JS Certificate" onclick="openModal('Screenshot_2025-06-19-08-31-00-54_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')"><div class="card-body"><h3 class="card-title">React JS Development</h3><p class="card-description">Mastered component-based architecture, state management, and hooks to build modern, dynamic user interfaces.</p><span class="card-date">Issued: March 2024</span></div></div>
+                <div class="card certificate-card"><img class="card-img" src="Screenshot_2025-06-19-08-30-00-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" alt="Git & Github Certificate" onclick="openModal('Screenshot_2025-06-19-08-30-00-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')"><div class="card-body"><h3 class="card-title">Git & Github for Developers</h3><p class="card-description">Gained proficiency in version control, branching strategies, and collaborative workflows using Git and GitHub.</p><span class="card-date">Issued: January 2024</span></div></div>
+                <div class="card certificate-card"><img class="card-img" src="mongodb_cerfi.jpeg" alt="MongoDB Certificate" onclick="openModal('mongodb_cerfi.jpeg')"><div class="card-body"><h3 class="card-title">MongoDB</h3><p class="card-description">Acquired skills in NoSQL database design, CRUD operations, and data aggregation within the MongoDB ecosystem.</p><span class="card-date">Issued: January 2024</span></div></div>
+            </div>
+        </div>
+        <div id="myModal" class="modal"><span class="close" onclick="closeModal()">×</span><img class="modal-content" id="modalImage" alt="Full-size Certificate Image"></div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+    <h2 class="section-title" style="text-align: center; display: block;">Let's Connect</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div><h1>Ready to Start Your <span>Next Project?</span></h1><p class="intro-text">Let's build something great together. Reach out to me through any of the methods below, or fill out the form and I'll get back to you promptly.</p></div>
+                    <div class="info-card"><div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div class="info-content"><h4>Email</h4><p id="email-text">vardhineedinandini@gmail.com<button class="copy-button" data-copy-target="email-text"><span class="icon-copy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></button></p></div></div>
+                    <div class="info-card"><div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></div><div class="info-content"><h4>Phone</h4><p id="phone-text">+91 9014926311<button class="copy-button" data-copy-target="phone-text"><span class="icon-copy"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></span><span class="icon-check"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></span></button></p></div></div>
+                    <div class="info-card"><div class="info-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div><div class="info-content"><h4>Location</h4><p>Andhra Pradesh, India (Remote Available)</p></div></div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <h2>Send a Message</h2>
+                    <form id="contact-form">
+                        <div class="form-row"><div class="form-group"><label for="name">Full Name</label><input type="text" id="name" name="name" required><span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span><span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span></div><div class="form-group"><label for="email">Email</label><input type="email" id="email" name="email" required><span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span><span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span></div></div>
+                        <div class="form-group"><label for="message">Message</label><textarea id="message" name="message" required></textarea><span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span><span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span></div>
+                        <button type="submit" class="submit-button" id="submit-btn"><span class="btn-text">Send Message</span><span class="btn-icon" style="display: none;"></span></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
     <script>
-        // JavaScript to handle the mobile navigation toggle
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile navigation toggle ---
             const menuToggle = document.querySelector('.menu-toggle');
             const navLinks = document.querySelector('.nav-links');
-
             if (menuToggle && navLinks) {
-                menuToggle.addEventListener('click', function () {
-                    navLinks.classList.toggle('active');
-                });
+                menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
             }
-        });
-    </script>
 
-    <script>
-        // Ripple effect for resume button
-        document.querySelectorAll('.resume-button').forEach(button => {
-            button.addEventListener('mousemove', function (e) {
-                let rect = this.getBoundingClientRect();
-                let x = e.clientX - rect.left;
-                let y = e.clientY - rect.top;
-                this.style.setProperty('--x', x + 'px');
-                this.style.setProperty('--y', y + 'px');
-            });
-        });
-    </script>
-
-    <script>
-        (function () {
-            emailjs.init('y1mz8WaidXiaKd9rS');
-        })();
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-
-            if (menuToggle && navLinks) {
-                menuToggle.addEventListener('click', function () {
-                    navLinks.classList.toggle('active');
-                });
-            }
-        });
-
-        function handleMouseMove(event) {
-            const button = event.target.querySelector('button');
-            if (button) {
-                let rect = button.getBoundingClientRect();
-                let x = event.clientX - rect.left;
-                let y = event.clientY - rect.top;
-                button.style.setProperty('--x', x + 'px');
-                button.style.setProperty('--y', y + 'px');
-            }
-        }
-
-        document.getElementById('contact-form').addEventListener('submit', function (event) {
-            event.preventDefault();
-            const messageContainer = document.getElementById('message-container');
-            const messageText = document.getElementById('message-text');
-
-            var name = this.from_name.value;
-            var email = this.from_email.value;
-            var message = this.message.value;
-
-            emailjs.send('service_s5kbqyo', 'template_1m5sfig', {
-                from_name: 'test',
-                from_email: 'test@example.com',
-                message: 'This is a test message',
-            })
-                .then(response => {
-                    console.log('Test Email Sent!', response);
-                    return emailjs.send('service_s5kbqyo', 'template_1m5sfig', {
-                        from_name: name,
-                        from_email: email,
-                        message: message,
-                    });
-                })
-                .then(function (response) {
-                    messageText.textContent = 'Message sent successfully!';
-                    messageContainer.classList.add('show');
-                    document.getElementById('contact-form').reset();
-                    console.log('SUCCESS!', response.status, response.text);
-                }, function (error) {
-                    let errorMessage = 'Message sent Successfully!.';
-                    console.error(error, '...');
-                });
-        });
-
-        function closeMessage() {
-            const messageContainer = document.getElementById('message-container');
-            messageContainer.classList.remove('show');
-        }
-    </script>
-
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-
-    <script>
-        // Intersection Observer for Section Animations
-        const sections = document.querySelectorAll('section');
-
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.2
-        });
-
-        sections.forEach(section => {
-            observer.observe(section);
-        });
-    </script>
-
-    <script>
-        // Redirect to About section on mobile
-        document.addEventListener('DOMContentLoaded', function () {
+            // --- Redirect to About section on mobile ---
             if (window.innerWidth <= 768) {
-                window.location.hash = '#about';
+                setTimeout(() => { window.location.hash = '#about'; }, 100);
+            }
+
+            // --- Intersection Observer for Section Animations ---
+            const sections = document.querySelectorAll('section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+            sections.forEach(section => observer.observe(section));
+
+            // --- Certificate Modal ---
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById("modalImage");
+            window.openModal = (imgSrc) => {
+                if(modal && modalImg) {
+                    modal.style.display = "block";
+                    modalImg.src = imgSrc;
+                }
+            }
+            window.closeModal = () => {
+                if(modal) modal.style.display = "none";
+            }
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            // --- Contact Form: Copy to Clipboard ---
+            const copyButtons = document.querySelectorAll('.copy-button');
+            copyButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetId = button.dataset.copyTarget;
+                    const textToCopy = document.getElementById(targetId).childNodes[0].nodeValue.trim();
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        button.classList.add('copied');
+                        setTimeout(() => button.classList.remove('copied'), 2000);
+                    });
+                });
+            });
+
+            // --- Contact Form: Real-time Validation & Submission ---
+            const form = document.getElementById('contact-form');
+            if (form) {
+                const inputs = form.querySelectorAll('input[required], textarea[required]');
+                const submitBtn = document.getElementById('submit-btn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const btnIcon = submitBtn.querySelector('.btn-icon');
+
+                const validateEmail = (email) => /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(email).toLowerCase());
+                const validateInput = (input) => {
+                    const group = input.parentElement;
+                    let isValid = (input.type === 'email') ? validateEmail(input.value) : input.value.trim() !== '';
+                    group.classList.toggle('valid', isValid);
+                    group.classList.toggle('invalid', !isValid);
+                    return isValid;
+                };
+
+                inputs.forEach(input => input.addEventListener('input', () => validateInput(input)));
+
+                // --- EmailJS setup ---
+                (function () { emailjs.init('y1mz8WaidXiaKd9rS'); })();
+
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    let isFormValid = Array.from(inputs).every(validateInput);
+
+                    if (isFormValid) {
+                        submitBtn.disabled = true;
+                        btnText.textContent = 'Sending...';
+                        btnIcon.innerHTML = '<div class="spinner"></div>';
+                        btnIcon.style.display = 'inline-flex';
+
+                        emailjs.sendForm('service_s5kbqyo', 'template_1m5sfig', form)
+                            .then(() => {
+                                submitBtn.classList.add('success');
+                                btnText.textContent = 'Message Sent!';
+                                btnIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                                setTimeout(() => {
+                                    form.reset();
+                                    inputs.forEach(input => input.parentElement.classList.remove('valid', 'invalid'));
+                                    submitBtn.classList.remove('success');
+                                    submitBtn.disabled = false;
+                                    btnText.textContent = 'Send Message';
+                                    btnIcon.style.display = 'none';
+                                }, 3000);
+                            }, (error) => {
+                                console.log('FAILED...', error);
+                                alert('Failed to send message. Please try again.');
+                                // Reset button on failure
+                                submitBtn.disabled = false;
+                                btnText.textContent = 'Send Message';
+                                btnIcon.style.display = 'none';
+                            });
+                    }
+                });
             }
         });
     </script>
 </body>
-
 </html>
