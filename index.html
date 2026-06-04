@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vardhineedi Nandini</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="about1.css">
+  <link rel="stylesheet" href="education.css"> <!-- Using the new education.css -->
+  <link rel="stylesheet" href="internships.css">
+  <link rel="stylesheet" href="achivements.css">
+  <link rel="stylesheet" href="certificates.css">
+  <link rel="stylesheet" href="contact.css">
+  <style>
+    /* This inline style block is kept for your original responsive adjustments */
+
+    .subscribe-button {
+      background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 8px 20px;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .subscribe-button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+
+    @media (max-width: 768px) {
+      .container {
+        max-width: 95% !important;
+        padding: 10px !important;
+      }
+
+      .hero-content {
+        flex: 1 1 100% !important;
+        padding-right: 0 !important;
+        margin-bottom: 15px !important;
+      }
+
+      .hero-image-container {
+        display: none !important;
+      }
+
+      .hero-content .button-group {
+        flex-direction: column !important;
+        align-items: stretch !important;
+      }
+
+      .hero-content .button-group a {
+        margin-bottom: 10px;
+      }
+
+      .contact-section {
+        width: 100% !important;
+      }
+
+      .contact-wrapper {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+
+      .image-container {
+        margin-right: 0 !important;
+        margin-bottom: 15px !important;
+      }
+
+      .form-container {
+        width: 100% !important;
+      }
+
+      .social-strip {
+        margin-top: 15px !important;
+      }
+
+      nav {
+        padding: 10px 10px !important;
+      }
+
+      .nav-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #0f172a;
+        /* Match dark theme */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 10px;
+        border: 1px solid #334155;
+      }
+
+      .nav-links.active {
+        display: flex;
+        z-index: 1000;
+      }
+
+      .nav-links a {
+        padding: 10px 20px;
+        border-bottom: 1px solid #334155;
+        display: block;
+        text-align: left;
+      }
+
+      .nav-links a[href="#home"] {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      #home {
+        display: flex !important;
+      }
+    }
+
+    @media (min-width: 769px) {
+      #home {
+        display: flex !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-content">
+      <div class="logo">My Portfolio</div>
+      <button class="menu-toggle" aria-label="toggle navigation menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <div class="nav-links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#internships">INTERNSHIPS</a>
+        <a href="#achievements">ACHIEVEMENTS</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#certifications">CERTIFICATIONS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+    <div class="mobile-subtitle">AI Full Stack Developer</div>
+  </nav>
+
+  <div class="social-strip">
+    <a href="https://www.linkedin.com/in/vardhineedi-nandini-544a12280/" class="social-icon"><i
+        class="fab fa-linkedin"></i></a>
+    <a href="https://www.codechef.com/users/nandu_v" class="social-icon"><i class="fas fa-globe"></i></a>
+    <a href="https://github.com/nandinivardhineedi" class="social-icon"><i class="fab fa-github"></i></a>
+
+    <a href="https://leetcode.com/u/nandu_v/" class="social-icon"><i class="fas fa-globe"></i></a>
+  </div>
+
+
+  <section id="home" class="hero">
+    <div class="container hero-container">
+      <div class="hero-layout">
+
+        <!-- LEFT: Text content -->
+        <div class="hero-text-col">
+          <div class="hero-badge">
+            <i class="fas fa-code"></i>
+            SDE &middot; AI / Full-Stack &middot; Fresher 2026
+          </div>
+          <h2 class="hero-subtitle">Hello! I'm</h2>
+          <h1 class="hero-title">VARDHINEEDI NANDINI</h1>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat">
+              <span class="hero-stat-value">8.65</span>
+              <span class="hero-stat-label">CGPA</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">2&times;</span>
+              <span class="hero-stat-label">Hackathon Winner</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">SIH</span>
+              <span class="hero-stat-label">2024 Finalist</span>
+            </div>
+          </div>
+
+          <p class="description">
+            CS + IoT + Cybersecurity engineer who ships production AI systems &mdash; not just Jupyter notebooks.
+            I build with RAG, LangChain, FAISS &amp; LLM stacks, backed by real internship impact at BagnDash (US) and
+            Koyya Enterprises.
+            Research published at <strong>ICAAAI-2025</strong>.
+          </p>
+
+          <div class="hero-role-tags">
+            <span class="role-tag">Python</span>
+            <span class="role-tag">React.js / Next.js</span>
+            <span class="role-tag">FastAPI &middot; Node.js</span>
+            <span class="role-tag">LangChain &middot; RAG</span>
+            <span class="role-tag">MongoDB &middot; Firebase</span>
+            <span class="role-tag">Agentic AI</span>
+          </div>
+
+          <p class="hero-availability">
+            <span class="avail-dot"></span>
+            Available within 15 days &nbsp;&middot;&nbsp; Hyderabad &middot; Bengaluru &middot; Remote
+          </p>
+
+          <div class="button-group">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            <a href="NandiniV_Resume.docx" class="btn btn-outline" target="_blank">
+              <i class="fas fa-download" style="margin-right:6px;"></i>Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- RIGHT: Video card -->
+        <div class="hero-video-col">
+          <div class="hero-video-card">
+            <video id="hero-vid" class="hero-video" autoplay loop muted playsinline>
+              <source src="hero-video.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-video-ring"></div>
+            <div class="hero-video-controls">
+              <button class="hvc-btn" id="hvc-mute" title="Toggle sound" aria-label="Toggle sound">
+                <svg id="hvc-mute-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2">
+                  <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" />
+                  <line x1="23" y1="9" x2="17" y2="15" />
+                  <line x1="17" y1="9" x2="23" y2="15" />
+                </svg>
+              </button>
+              <button class="hvc-btn" id="hvc-play" title="Toggle play" aria-label="Toggle play">
+                <svg id="hvc-play-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16" rx="1" />
+                  <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+              </button>
+              <span class="hvc-label">Nandini &middot; Intro</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <section id="about">
+    <div class="container">
+      <div class="about-section-wrapper">
+        <div class="about-image-container">
+          <div class="image-wrapper">
+            <img src="My_long_photo copy.jpg" alt="Nandini Vardhineedi" class="profile-image">
+          </div>
+          <div class="status-badge">
+            <div class="status-indicator"></div>
+            Available for opportunities
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="name-title">
+            <h1 class="name">VARDHINEEDI NANDINI</h1>
+            <p class="title">Full-Stack Developer & AI Solutions Engineer</p>
+          </div>
+          <p class="description">
+            CS + IoT + Cybersecurity engineer who ships <strong>production AI systems</strong> &mdash; not just Jupyter
+            notebooks.<br><br>
+            I've built and deployed real backends: a real-time audio topic detection pipeline at <strong>BagnDash
+              (US)</strong> using FastAPI + MongoDB achieving <strong>75% accuracy</strong> and <strong>15% latency
+              reduction</strong>, and enterprise-grade RESTful APIs at <strong>Koyya Enterprises</strong> using Node.js
+            + Firebase with a <strong>30% improvement in data retrieval speed</strong>.<br><br>
+            My research on an <strong>Agentic AI Intrusion Detection System</strong> was accepted and published at
+            <strong>ICAAAI-2025</strong>. On the AI side, I build with RAG pipelines, LangChain, FAISS, LLM integration
+            (Gemini, OpenAI), and prompt engineering &mdash; applied to real products. On the full-stack side: React.js,
+            Next.js, Node.js, FastAPI, MongoDB, SQL, CI/CD, and AWS fundamentals.<br><br>
+            <b>What sets me apart:</b> 2&times; hackathon winner (150+ and 100+ team pools), SIH Finalist 2024, 8.65
+            CGPA, 2,000+ LinkedIn followers, and a CodeChef rating of 1372. Open to SDE, Full-Stack, or AI/ML roles
+            &mdash; ideally in product companies where I can own features end-to-end.<br><br>
+            <span style="color: var(--accent);">&#128205; Available within 15 days &nbsp;|&nbsp; Hyderabad &middot;
+              Bengaluru &middot; Remote &nbsp;|&nbsp; Open to work</span>
+          </p>
+          <div class="highlights">
+            <div class="highlight-item"><i class="fas fa-code highlight-icon"></i>
+              <div class="highlight-text">Full-Stack Development</div>
+              <div class="highlight-subtext">End-to-end solutions</div>
+            </div>
+            <div class="highlight-item"><i class="fas fa-brain highlight-icon"></i>
+              <div class="highlight-text">AI Integration</div>
+              <div class="highlight-subtext">Machine learning solutions</div>
+            </div>
+            <div class="highlight-item"><i class="fas fa-robot highlight-icon"></i>
+              <div class="highlight-text">Agents Deveploment</div>
+              <div class="highlight-subtext">Autonomous systems design</div>
+            </div>
+          </div>
+          <div class="skills-section">
+            <h3 class="skills-title">Technical Expertise</h3>
+            <div class="skills-grid">
+              <div class="skill-item skill-hot">Python</div>
+              <div class="skill-item skill-hot">JavaScript</div>
+              <div class="skill-item">Java</div>
+              <div class="skill-item skill-hot">TypeScript</div>
+              <div class="skill-item">SQL</div>
+              <div class="skill-item">React.js</div>
+              <div class="skill-item">Next.js</div>
+              <div class="skill-item">HTML5 / CSS3</div>
+              <div class="skill-item">Node.js</div>
+              <div class="skill-item skill-hot">FastAPI</div>
+              <div class="skill-item">REST API</div>
+              <div class="skill-item">Flask</div>
+              <div class="skill-item skill-hot">LangChain</div>
+              <div class="skill-item skill-hot">RAG Pipelines</div>
+              <div class="skill-item skill-hot">LLM Integration</div>
+              <div class="skill-item skill-hot">Generative AI</div>
+              <div class="skill-item skill-hot">Prompt Engineering</div>
+              <div class="skill-item skill-hot">FAISS</div>
+              <div class="skill-item skill-hot">Agentic AI</div>
+              <div class="skill-item">NLP / ML</div>
+              <div class="skill-item">Scikit-learn</div>
+              <div class="skill-item">OpenAI API</div>
+              <div class="skill-item">Gemini API</div>
+              <div class="skill-item">MongoDB</div>
+              <div class="skill-item">Firebase / Firestore</div>
+              <div class="skill-item">MySQL</div>
+              <div class="skill-item">CI/CD</div>
+              <div class="skill-item">AWS (Fundamentals)</div>
+              <div class="skill-item">Docker</div>
+              <div class="skill-item">Git / GitHub</div>
+              <div class="skill-item">Linux</div>
+              <div class="skill-item">Agile / Scrum</div>
+            </div>
+          </div>
+          <div class="cta-section">
+            <a href="NandiniV_Resume.docx" class="btn btn-cta-primary" style="color: aliceblue;" target="_blank"><i
+                class="fas fa-download"></i> Download Resume</a>
+            <a href="#contact" class="btn btn-cta-secondary" style="color: aliceblue;"><i class="fas fa-envelope"></i>
+              Contact Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === BOLD & PROFESSIONAL EDUCATION SECTION === -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Education</h2>
+        <p>My academic qualifications and background.</p>
+      </div>
+      <div class="education-grid">
+        <!-- B.Tech Entry -->
+        <div class="education-entry">
+          <div class="education-header">
+            <h4 class="education-degree">Bachelor of Technology, Computer Science & Engineering with IOT & CS including
+              Blockchain Technology</h4>
+            <span class="education-year">2022 - 2026</span>
+          </div>
+          <p class="education-institution">Sasi Institute of Technology & Engineering,Tadepalligudem</p>
+          <p class="education-details">
+            Focused curriculum in IoT, Cybersecurity, and Blockchain Technology.
+            <span class="education-score">CGPA: 8.65</span>
+          </p>
+        </div>
+        <!-- Intermediate Entry -->
+        <div class="education-entry">
+          <div class="education-header">
+            <h4 class="education-degree">Intermediate Education</h4>
+            <span class="education-year">2020 - 2022</span>
+          </div>
+          <p class="education-institution">Sasi Junior College,Tanuku</p>
+          <p class="education-details">
+            Concentration in Mathematics, Physics, and Chemistry.
+            <span class="education-score">Percentage: 94.5%</span>
+          </p>
+        </div>
+        <div class="education-entry">
+          <div class="education-header">
+            <h4 class="education-degree">10th Education</h4>
+            <span class="education-year">2020</span>
+          </div>
+          <p class="education-institution">Sasi English Meduim High School,Tanuku</p>
+          <p class="education-details">
+            Andhra Pradesh Board of Secondary Education
+            <span class="education-score">Percentage: 100%</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="internships">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Internship Experience</h2>
+        <p>My professional journey and hands-on experience in the tech industry.</p>
+      </div>
+      <div class="grid-layout">
+        <!-- Internship: Koyya Enterprises -->
+        <div class="card internship-card">
+          <div class="internship-header">
+            <h3 class="internship-company">Koyya Enterprises</h3>
+            <span class="internship-duration">Jul 2025 – Sep 2025</span>
+          </div>
+          <h4 class="internship-role">Backend Developer Intern &mdash; Remote</h4>
+          <p class="internship-description">
+            🔸 Boosted data retrieval speed by <strong>30%</strong> by redesigning MongoDB NoSQL schemas and optimising
+            query patterns for enterprise application APIs serving real-time data at scale.<br>
+            🔸 Reduced API integration time by building and maintaining <strong>5+ RESTful endpoints</strong> in Node.js
+            with clean, well-documented code, enabling faster feature delivery in Agile/Scrum sprints.<br>
+            🔸 Improved deployment reliability by setting up CI/CD pipeline configurations and participating in
+            production deployments, reducing manual release errors.<br>
+            🔸 Accelerated real-time data sync by integrating Firebase Firestore services, cutting data latency for live
+            application features.
+          </p>
+          <div class="internship-tech">
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">MongoDB</span>
+            <span class="tech-item">Firebase</span>
+            <span class="tech-item">REST API</span>
+            <span class="tech-item">CI/CD</span>
+            <span class="tech-item">Agile/Scrum</span>
+          </div>
+        </div>
+
+        <!-- Internship: BagnDash -->
+        <div class="card internship-card">
+          <div class="internship-header">
+            <h3 class="internship-company">BagnDash &mdash; US (Remote)</h3>
+            <span class="internship-duration">Feb 2025 – May 2025</span>
+          </div>
+          <h4 class="internship-role">Audio Processing AI Developer Intern &mdash; Remote</h4>
+          <p class="internship-description">
+            🔸 Achieved <strong>75% audio topic classification accuracy</strong> by developing a Python FastAPI backend
+            with MongoDB integration and custom AI model pipelines for real-time audio processing.<br>
+            🔸 Reduced inference latency by <strong>15%</strong> by optimising backend architecture and troubleshooting
+            bottlenecks in the REST API layer serving an Agile team of 5.<br>
+            🔸 Increased product reliability by integrating AI models into production pipelines and participating in
+            automated testing and production support activities.<br>
+            🔸 Delivered adaptive AI capabilities by applying emerging ML techniques to evolving product requirements,
+            staying ahead of industry trends.
+          </p>
+          <div class="internship-tech">
+            <span class="tech-item">Python</span>
+            <span class="tech-item">FastAPI</span>
+            <span class="tech-item">MongoDB</span>
+            <span class="tech-item">AI/ML Pipelines</span>
+            <span class="tech-item">REST API</span>
+            <span class="tech-item">Audio Processing</span>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Achievement Log</h2>
+      </div>
+      <div class="achievements-timeline">
+
+
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>AI Hackathon – 2nd Prize Winner</h3>
+            <p class="year">2025</p>
+            <p>
+              <b>Event:</b> AI Autonomous Hackathon Organized by Siddhartha Engineering College <br>
+              <b>Venue:</b> Siddhartha Engineering College,Vijayawada,AP<br>
+              <b>Theme:</b> Real-World AI Challenges <br>
+              <b>Participants:</b> 150+ Teams <br>
+              <b>Award:</b> Second Prize <br>
+              🔸Achieved 2nd place in a highly competitive AI Hackathon, standing out among 150+ teams.<br>🔸Developed
+              and
+              presented an innovative AI solution addressing real-world challenges.<br>🔸Demonstrated excellence in
+              technical
+              implementation, teamwork, and problem-solving under pressure.<br>🔸This accomplishment reflects a strong
+              foundation in AI development and a commitment to continuous innovation.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Received Token of appreication in Prayatana 2.0</h3>
+            <p class="year">2025</p>
+            <p>
+              <b>Event:</b> 36-Hour Hackathon Organized by AITR ACM & ACM Women’s Chapter <br>
+              <b>Venue:</b> Acropolis Institute of Technology & Research, Indore,MP <br>
+              <b>Theme:</b> AI-Powered Solutions<br>
+              <b>Participants:</b> 100+ Teams <br>
+              <b>Award:</b> 4th Prize & Token of Appreciation under Women Empowerment <br>
+              🔸Secured 4th place in a competitive 36-hour Hackathon focused on civic innovation. Our team built an
+              AI-driven system that intelligently analyzes public complaints and routes them to the appropriate
+              departments for faster resolution.<br>🔸The project emphasized real-world impact, technical precision, and
+              collaborative problem-solving.<br>🔸This achievement highlights our commitment to using AI for public good
+              and
+              streamlining service delivery.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>24-Hour Hackathon</h3>
+            <p class="year">2025</p>
+            <p>
+              <b>Event:</b> AI Innovation Hackathon Organized by Foreign Alumni Network<br>
+              <b>Venue:</b> National Institute of Technology, Andhra Pradesh (NITAP)<br>
+              <b>Theme:</b> AI-Powered Solutions<br>
+              <b>Participants:</b> 100+ Teams <br>
+              🔸Engaged in a high-intensity 24-hour Hackathon hosted by the Foreign Alumni Network at NITAP.<br>🔸Teams
+              were
+              challenged with real-world problem statements focused on social impact, requiring rapid ideation and
+              execution.<br>🔸Collaborated with peers to design and prototype an AI-powered solution under tight
+              deadlines.<br>
+              🔸The experience sharpened skills in problem-solving, technical implementation, and teamwork.<br>🔸This
+              participation reflects a proactive mindset and a dedication to applying AI for meaningful change.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-trophy"></i></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>Web Master Position</h3>
+            <p class="year">2024-25</p>
+            <p>🔸Led web development initiatives as Web Master, overseeing technical architecture, content strategy, and
+              digital operations for the SITE ACM Student Chapter.<br>🔸Demonstrated leadership in full-stack
+              development and
+              community engagement.</p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-certificate"></i></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>SIH Finalist</h3>
+            <p class="year">2024</p>
+            <p>🔸Selected as a finalist in the prestigious Smart India Hackathon 2024, a nationwide innovation challenge
+              aimed at solving real-world problems through technology.<br>🔸Contributed to the development of
+              cutting-edge
+              solutions, demonstrating creativity, technical expertise, and collaborative spirit on a national stage.
+            </p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-medal"></i></div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-content">
+            <h3>NSS Volunteer</h3>
+            <p class="year">2023-26</p>
+            <p>🔸Actively engaged in community service and social development through National Service Scheme (NSS)
+              initiatives.<br>🔸Contributed to awareness campaigns, environmental efforts, and youth empowerment
+              programs,
+              fostering civic responsibility and leadership.</p>
+          </div>
+          <div class="timeline-icon"><i class="fas fa-handshake"></i></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured Projects</h2>
+        <p>A selection of projects where I've applied my skills to create real-world solutions.</p>
+      </div>
+      <div class="grid-layout">
+
+        <!-- Porject -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">Agentic AI Intrusion Detection System <span class="published-badge">Published ·
+                ICAAAI-2025</span></h3>
+            <p class="card-description">
+              💨 Game-theoretic hybrid <strong>SVM + Autoencoder</strong> framework that detects known attacks via SVM
+              and unknown anomalies via Autoencoder, with an adaptive agent that responds in real time.<br>
+              💨 Demonstrated on SQL injection and brute-force scenarios. Achieved <strong>~72% F1-Score</strong> on
+              unknown attack detection in a Flask real-time proxy environment.<br>
+              💨 Research accepted and <strong>published at ICAAAI-2025</strong>.
+            </p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-python" title="Python"></i>
+              <i class="fa-solid fa-brain" title="ML/DL"></i>
+              <i class="fa-solid fa-chain" title="Agentic-AI"></i>
+              <i class="fa-solid fa-robot" title="IDS"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/Agentic-AI-IDS-Model" class="btn-project"
+              target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project-1 -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">AI-Enabled Public Complaint Analysis & Routing </h3>
+            <p class="card-description">💨Designed and built a full-stack platform leveraging Python, Next.js, FastAPI,
+              and Firebase to analyze 800+ citizen complaints from disparate sources.</br>
+              💨Applied NLP and clustering techniques, achieving approximately 80% accuracy in key local issue
+              identification.</br>
+              💨Streamlined data acquisition by integrating 5+ APIs, cutting data collection time by 35%, and
+              successfully scaled the system to manage 1,000+ monthly complaints.
+            </p>
+            <div class="tech-stack">
+              <i class="fa-solid fa-n" title="Next.js"></i>
+              <!-- <i class="fa-brands fa-twitch" title="TypeScript"></i> -->
+              <i class="fa-solid fa-brain" title="Machine Learning"></i>
+              <i class="fa-brands fa-python" title="Python"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/Public-Complaints-Routing" class="btn-project"
+              target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Porject -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">AI Career Guidance Chatbot <span style="font-size:0.75rem;opacity:0.7;">(RAG +
+                LangChain)</span></h3>
+            <p class="card-description">
+              💨 End-to-end <strong>RAG pipeline</strong> using LangChain + FAISS + Gemini/OpenAI to deliver
+              personalised career guidance.<br>
+              💨 Includes document ingestion, vector search, and streaming chat interface.<br>
+              💨 Improved response relevance by ~60% via semantic retrieval; FAISS cuts query response time by ~30%.<br>
+              💨 Designed dynamic features like personalised career roadmaps, boosting user engagement and usability.
+            </p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-python" title="Python"></i>
+              <i class="fa-solid fa-brain" title="Open LLM's"></i>
+              <i class="fa-solid fa-chain" title="Langchain"></i>
+              <i class="fa-solid fa-robot" title="RAG"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/360CareerChatbotNext" class="btn-project"
+              target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- project -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">n8nWorkshopPro</h3>
+            <p class="card-description">💨Developed an end-to-end automated workshop Workflow with n8n, impriving
+              efficiency,reducing manual effort and ensuring timely certificate delivery.</p>
+            <div class="tech-stack">
+              <i class="fas fa-robot " title="n8n"></i>
+              <!-- <i class="fa-brands fa-twitch" title="TypeScript"></i> -->
+              <i class="fa-solid fa-brain" title="Machine Learning"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/-Automatic-Event-or-Workshop-Planning-Organizing-using-AI"
+              class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Project  -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">BioMedical Chatbot using RAG</h3>
+            <p class="card-description">💨An intelligent chatbot leveraging RAG and Langchain for creating pipeline to
+              provide accurate medical information and assistance.
+              <br>
+              1.PDF/txt/Excel(Load Source data) <br>
+              Load -> Transform -> Embedding -> Chunk's -> Vector's -> Vector store -> LLM -> Query<br>
+              2. Query vector Base <br>
+              3. Retrieve most Similar
+            </p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-python" title="Python"></i>
+              <i class="fa-solid fa-brain" title="TensorFlow"></i>
+              <i class="fa-solid fa-database" title="RAG"></i>
+            </div>
+            <!-- CORRECTED LINK -->
+            <a href="https://github.com/nandinivardhineedi/Biomedical-Chatbot-using-RAG" class="btn-project"
+              target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- Project 3
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">Student Self-Assessment Tool</h3>
+            <p class="card-description">A responsive web application designed to help students evaluate their skills and
+              track their learning progress.</p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-html5" title="HTML5"></i>
+              <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+              <i class="fa-brands fa-js" title="JavaScript"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/assessment-tool" class="btn-project" target="_blank">View on
+              GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div> -->
+
+        <!-- Project 4 -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">Personal Portfolio Website</h3>
+            <p class="card-description">💨A fully responsive personal portfolio built from scratch to showcase my
+              skills,
+              projects, and certifications.</p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-html5" title="HTML5"></i>
+              <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+              <i class="fa-brands fa-js" title="JavaScript"></i>
+            </div>
+            <!-- This link was already correct -->
+            <a href="https://github.com/nandinivardhineedi/portfolio" class="btn-project" target="_blank">View on GitHub
+              <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Porject -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">AI Basic to Advanced Projects</h3>
+            <p class="card-description">💨A comprehensive guide that explores Python projects leveraging AI, ranging
+              from
+              beginner to advanced levels, to enhance programming skills through practical applications.</p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-python" title="Python"></i>
+              <i class="fa-solid fa-brain" title="ML"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/Python_using_AI_Basic-to-advanced-projects"
+              class="btn-project" target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <!-- project -->
+        <div class="card project-card">
+          <div class="card-body">
+            <h3 class="card-title">Rubik's Cube using AI</h3>
+            <p class="card-description">💨Designed and implemented an algorithm that can solve a standard 3x3 Rubik’s
+              Cube
+              from any scrambled state.<br>
+              Controlled using SpeechRecognition and gestures</p>
+            <div class="tech-stack">
+              <i class="fa-brands fa-python" title="Python"></i>
+              <!-- <i class="fa-solid fa-comment-dots" title="TypeScript"></i> -->
+              <i class="fa-solid fa-hand-peace" title="Machine Learning"></i>
+            </div>
+            <a href="https://github.com/nandinivardhineedi/Rubik-s-Cube-using-AI" class="btn-project"
+              target="_blank">View on GitHub <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Credentials & Certifications</h2>
+        <p>A showcase of my commitment to continuous learning and skill development.</p>
+      </div>
+      <div class="cert-grid">
+
+
+        <!-- 5. Google AI Fundamentals — PDF / Credly badge -->
+        <div class="card certificate-card cert-card-featured">
+          <div class="cert-thumb cert-thumb-google">
+            <div class="cert-thumb-icon">
+              <i class="fab fa-google"></i>
+            </div>
+            <div class="cert-thumb-glow"></div>
+            <span class="cert-issuer-tag cert-issuer-tag-light">Google · Coursera</span>
+          </div>
+          <div class="card-body">
+            <div class="cert-title-row">
+              <h3 class="card-title">Google AI Fundamentals</h3>
+              <span class="cert-new-badge">NEW</span>
+            </div>
+            <p class="card-description">Completed Google's AI Fundamentals course on Coursera — covering core ML
+              concepts, neural networks, responsible AI practices, and practical AI tools. Verified Credly badge.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
+              <div class="cert-links">
+                <a href="https://www.credly.com/go/MFG7lFVm" target="_blank" class="cert-link cert-link-primary">
+                  <i class="fas fa-shield-alt"></i> Verify on Credly
+                </a>
+                <a href="https://drive.google.com/file/d/12GwmBa8Dwo7W6H5I-ItFn103LXxSMxpU/view?usp=sharing"
+                  target="_blank" class="cert-link cert-link-secondary">
+                  <i class="fas fa-file-pdf"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Intro to AI by Google — PDF -->
+        <div class="card certificate-card cert-card-featured">
+          <div class="cert-thumb cert-thumb-google2">
+            <div class="cert-thumb-icon">
+              <i class="fas fa-brain"></i>
+            </div>
+            <div class="cert-thumb-glow"></div>
+            <span class="cert-issuer-tag cert-issuer-tag-light">Google · Course Record</span>
+          </div>
+          <div class="card-body">
+            <div class="cert-title-row">
+              <h3 class="card-title">Intro to AI &mdash; Google</h3>
+              <span class="cert-new-badge">NEW</span>
+            </div>
+            <p class="card-description">Completed Google's Introduction to Artificial Intelligence course, building
+              foundational knowledge in AI concepts, machine learning, and real-world AI applications.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> June 2026</span>
+              <div class="cert-links">
+                <a href="https://drive.google.com/file/d/1mLpTjYDYMiWYfAvHjoUtuBWw4dhGWbUA/view?usp=sharing"
+                  target="_blank" class="cert-link cert-link-primary">
+                  <i class="fas fa-file-pdf"></i> View Certificate
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 1. Generative AI & Python — GUVI (image) -->
+        <div class="card certificate-card">
+          <div class="cert-img-wrap">
+            <img class="card-img" src="GuviCertification - 214FSW793b88141OD7.png"
+              alt="Generative AI & Python Certificate from GUVI"
+              onclick="openModal('GuviCertification - 214FSW793b88141OD7.png')">
+            <span class="cert-issuer-tag">GUVI</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Generative AI &amp; Python</h3>
+            <p class="card-description">Completed a hands-on program focused on Python programming and the practical
+              application of Generative AI models.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> March 2025</span>
+              <span class="cert-badge cert-badge-img" onclick="openModal('GuviCertification - 214FSW793b88141OD7.png')">
+                <i class="fas fa-eye"></i> View Certificate
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. React JS — image -->
+        <div class="card certificate-card">
+          <div class="cert-img-wrap">
+            <img class="card-img" src="Screenshot_2025-06-19-08-31-00-54_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+              alt="React JS Certificate"
+              onclick="openModal('Screenshot_2025-06-19-08-31-00-54_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')">
+            <span class="cert-issuer-tag">Coursera</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">React JS Development</h3>
+            <p class="card-description">Mastered component-based architecture, state management, and hooks to build
+              modern, dynamic user interfaces.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> March 2024</span>
+              <span class="cert-badge cert-badge-img"
+                onclick="openModal('Screenshot_2025-06-19-08-31-00-54_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Git & Github — image -->
+        <div class="card certificate-card">
+          <div class="cert-img-wrap">
+            <img class="card-img" src="Screenshot_2025-06-19-08-30-00-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg"
+              alt="Git & Github Certificate"
+              onclick="openModal('Screenshot_2025-06-19-08-30-00-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')">
+            <span class="cert-issuer-tag">Coursera</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">Git &amp; Github for Developers</h3>
+            <p class="card-description">Gained proficiency in version control, branching strategies, and collaborative
+              workflows using Git and GitHub.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> January 2024</span>
+              <span class="cert-badge cert-badge-img"
+                onclick="openModal('Screenshot_2025-06-19-08-30-00-17_40deb401b9ffe8e1df2f1cc5ba480b12.jpg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. MongoDB — image -->
+        <div class="card certificate-card">
+          <div class="cert-img-wrap">
+            <img class="card-img" src="mongodb_cerfi.jpeg" alt="MongoDB Certificate"
+              onclick="openModal('mongodb_cerfi.jpeg')">
+            <span class="cert-issuer-tag">MongoDB</span>
+          </div>
+          <div class="card-body">
+            <h3 class="card-title">MongoDB</h3>
+            <p class="card-description">Acquired skills in NoSQL database design, CRUD operations, and data aggregation
+              within the MongoDB ecosystem.</p>
+            <div class="cert-footer">
+              <span class="card-date"><i class="fas fa-calendar-alt"></i> January 2024</span>
+              <span class="cert-badge cert-badge-img" onclick="openModal('mongodb_cerfi.jpeg')">
+                <i class="fas fa-eye"></i> View Certificate
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+      </div><!-- /.cert-grid -->
+    </div>
+
+    <!-- Image modal (unchanged) -->
+    <div id="myModal" class="modal">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <img class="modal-content" id="modalImage" alt="Full-size Certificate Image">
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title" style="text-align: center; display: block;">Let's Connect</h2>
+      <div class="contact-wrapper">
+        <div class="contact-info">
+          <div>
+            <h1>Ready to Start Your <span>Next Project?</span></h1>
+            <p class="intro-text">Let's build something great together. Reach out to me through any of the methods
+              below, or fill out the form and I'll get back to you promptly.</p>
+            <!-- <p style="font-style: italic; font-weight: 600; margin-top: 15px; color: #4c8993; font-size: 1.1rem;">
+              Also, a <strong>YouTube Content Creator</strong> specializing in <strong>Voice-Overs for Animated
+                Characters</strong>, bringing stories to life with creative audio performance.
+            </p> -->
+          </div>
+
+
+          <!-- <div class="info-card">
+            <div class="info-icon">
+              <a href="https://www.youtube.com/@unlockyourselfwithtech" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 576 512"
+                  fill="var(--accent)">
+                  <path
+                    d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z" />
+                </svg>
+              </a>
+            </div>
+            <div class="info-content">
+              <h4>View & Subscribe</h4>
+              <p>Tech, AI and More</p>
+              <a href="https://www.youtube.com/@unlockyourselfwithtech" target="_blank" rel="noopener noreferrer">
+                <button class="subscribe-button">Go to Channel</button>
+              </a>
+            </div>
+          </div> -->
+
+
+
+
+          <div class="info-card">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h4>Email</h4>
+              <p id="email-text">vardhineedinandini@gmail.com
+                <button class="copy-button" data-copy-target="email-text">
+                  <span class="icon-copy">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </span>
+                  <span class="icon-check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h4>Phone</h4>
+              <p id="phone-text">+91 9014926311
+                <button class="copy-button" data-copy-target="phone-text">
+                  <span class="icon-copy">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                  </span>
+                  <span class="icon-check">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </span>
+                </button>
+              </p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div class="info-content">
+              <h4>Location</h4>
+              <p>Andhra Pradesh, India (Remote Available)</p>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper">
+          <h2>Send a Message</h2>
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+                <span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg></span>
+                <span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                <span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg></span>
+                <span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                    height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="8" x2="12" y2="12"></line>
+                    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                  </svg></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required></textarea>
+              <span class="validation-icon icon-valid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg></span>
+              <span class="validation-icon icon-invalid"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                </svg></span>
+            </div>
+            <button type="submit" class="submit-button" id="submit-btn"><span class="btn-text">Send Message</span><span
+                class="btn-icon" style="display: none;"></span></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // --- Mobile navigation toggle ---
+      const menuToggle = document.querySelector('.menu-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => navLinks.classList.toggle('active'));
+      }
+
+      // --- Redirect to About section on mobile ---
+      if (window.innerWidth <= 768) {
+        setTimeout(() => { window.location.hash = '#about'; }, 100);
+      }
+
+      // --- Intersection Observer for Section Animations ---
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+          }
+        });
+      }, { threshold: 0.1 });
+      sections.forEach(section => observer.observe(section));
+
+      // --- Certificate Modal ---
+      const modal = document.getElementById('myModal');
+      const modalImg = document.getElementById("modalImage");
+      window.openModal = (imgSrc) => {
+        if (modal && modalImg) {
+          modal.style.display = "block";
+          modalImg.src = imgSrc;
+        }
+      }
+      window.closeModal = () => {
+        if (modal) modal.style.display = "none";
+      }
+      window.onclick = (event) => {
+        if (event.target == modal) {
+          closeModal();
+        }
+      }
+
+      // --- Contact Form: Copy to Clipboard ---
+      const copyButtons = document.querySelectorAll('.copy-button');
+      copyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const targetId = button.dataset.copyTarget;
+          const textToCopy = document.getElementById(targetId).childNodes[0].nodeValue.trim();
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            button.classList.add('copied');
+            setTimeout(() => button.classList.remove('copied'), 2000);
+          });
+        });
+      });
+
+      // --- Contact Form: Real-time Validation & Submission ---
+      const form = document.getElementById('contact-form');
+      if (form) {
+        const inputs = form.querySelectorAll('input[required], textarea[required]');
+        const submitBtn = document.getElementById('submit-btn');
+        const btnText = submitBtn.querySelector('.btn-text');
+        const btnIcon = submitBtn.querySelector('.btn-icon');
+
+        const validateEmail = (email) => /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(String(email).toLowerCase());
+        const validateInput = (input) => {
+          const group = input.parentElement;
+          let isValid = (input.type === 'email') ? validateEmail(input.value) : input.value.trim() !== '';
+          group.classList.toggle('valid', isValid);
+          group.classList.toggle('invalid', !isValid);
+          return isValid;
+        };
+
+        inputs.forEach(input => input.addEventListener('input', () => validateInput(input)));
+
+        // --- EmailJS setup ---
+        (function () { emailjs.init('y1mz8WaidXiaKd9rS'); })();
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          let isFormValid = Array.from(inputs).every(validateInput);
+
+          if (isFormValid) {
+            submitBtn.disabled = true;
+            btnText.textContent = 'Sending...';
+            btnIcon.innerHTML = '<div class="spinner"></div>';
+            btnIcon.style.display = 'inline-flex';
+
+            emailjs.sendForm('service_s5kbqyo', 'template_1m5sfig', form)
+              .then(() => {
+                submitBtn.classList.add('success');
+                btnText.textContent = 'Message Sent!';
+                btnIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                setTimeout(() => {
+                  form.reset();
+                  inputs.forEach(input => input.parentElement.classList.remove('valid', 'invalid'));
+                  submitBtn.classList.remove('success');
+                  submitBtn.disabled = false;
+                  btnText.textContent = 'Send Message';
+                  btnIcon.style.display = 'none';
+                }, 3000);
+              }, (error) => {
+                console.log('FAILED...', error);
+                alert('Failed to send message. Please try again.');
+                // Reset button on failure
+                submitBtn.disabled = false;
+                btnText.textContent = 'Send Message';
+                btnIcon.style.display = 'none';
+              });
+          }
+        });
+      }
+    });
+  </script>
+
+
+  <!-- Hero video controls -->
+  <script>
+    (function () {
+      var vid = document.getElementById('hero-vid');
+      var muteBtn = document.getElementById('hvc-mute');
+      var muteIcon = document.getElementById('hvc-mute-icon');
+      var playBtn = document.getElementById('hvc-play');
+      var playIcon = document.getElementById('hvc-play-icon');
+
+      var SVG_MUTED = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="23" y1="9" x2="17" y2="15"/><line x1="17" y1="9" x2="23" y2="15"/>';
+      var SVG_UNMUTED = '<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>';
+      var SVG_PLAY = '<polygon points="5 3 19 12 5 21 5 3"/>';
+      var SVG_PAUSE = '<rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>';
+
+      if (muteBtn && vid) {
+        muteBtn.addEventListener('click', function () {
+          vid.muted = !vid.muted;
+          muteIcon.innerHTML = vid.muted ? SVG_MUTED : SVG_UNMUTED;
+        });
+      }
+      if (playBtn && vid) {
+        playBtn.addEventListener('click', function () {
+          if (vid.paused) {
+            vid.play();
+            playIcon.innerHTML = SVG_PAUSE;
+          } else {
+            vid.pause();
+            playIcon.innerHTML = SVG_PLAY;
+          }
+        });
+      }
+    })();
+  </script>
+
+</body>

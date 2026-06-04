@@ -1,0 +1,75 @@
+
+/* === INTERNSHIP SECTION STYLES === */
+
+/*
+ * The .internship-card class is used to style each internship entry.
+ * It inherits from the global .card style for a consistent look and feel,
+ * including the background, border, and hover effects.
+*/
+.internship-card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px; /* Consistent padding with other cards */
+    background: linear-gradient(135deg, rgba(1, 9, 51, 0.1), rgba(21, 58, 138, 0.05)); /* Matching gradient */
+}
+
+/* Header containing company name and duration */
+.internship-card .internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    gap: 15px;
+}
+
+/* Company Name Styling */
+.internship-card .internship-company {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--light); /* Bright, primary text color */
+}
+
+/* Internship Duration Badge */
+.internship-card .internship-duration {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    background-color: rgba(30, 41, 59, 0.8); /* Dark, subtle badge background */
+    padding: 5px 10px;
+    border-radius: 50px;
+    flex-shrink: 0; /* Prevents the date from wrapping on smaller screens */
+    white-space: nowrap;
+}
+
+/* Role/Title Styling */
+.internship-card .internship-role {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--accent); /* Vibrant accent color for the role, as seen in the image */
+    margin-bottom: 15px;
+}
+
+/* Description Text */
+.internship-card .internship-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-secondary); /* Muted color for readability */
+    flex-grow: 1;
+}
+
+/* Tech Stack Section */
+.internship-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Individual Tech Skill Badge */
+.internship-tech .tech-item {
+    background-color: var(--primary); /* Using the primary theme color */
+    color: var(--light);
+    padding: 5px 12px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
