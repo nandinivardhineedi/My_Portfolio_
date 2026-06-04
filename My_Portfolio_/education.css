@@ -1,0 +1,91 @@
+/* === BOLD & PROFESSIONAL EDUCATION SECTION STYLES === */
+
+/* #education {
+    background: var(--dark); /* A solid, dark background for a serious tone */
+
+
+.education-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* A single column for a clean, focused layout */
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-entry {
+    background: var(--card-bg);
+    border-left: 5px solid var(--accent); /* A strong accent border for emphasis */
+    padding: 2rem;
+    border-radius: 0 8px 8px 0; /* Sharp edges on the left, rounded on the right */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.education-entry:hover {
+    background-color: rgba(30, 41, 59, 0.8); /* Slightly lighten on hover */
+    transform: translateY(-5px);
+}
+
+.education-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap; /* Allows year to wrap on small screens */
+    gap: 1rem;
+}
+
+/* BOLD DEGREE STYLING */
+.education-degree {
+    font-size: 2.2rem; /* Large, impactful font size */
+    font-weight: 800; /* Extra bold for emphasis */
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.education-year {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--accent);
+    background-color: rgba(17, 100, 102, 0.2);
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+/* INSTITUTION AND DETAILS */
+.education-institution {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.education-details {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.education-score {
+    display: inline-block;
+    margin-top: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background: var(--gradient);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .education-degree {
+        font-size: 1.8rem;
+    }
+
+    .education-entry {
+        padding: 1.5rem;
+    }
+}
